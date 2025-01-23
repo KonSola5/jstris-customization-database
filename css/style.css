@@ -63,14 +63,23 @@ menu {
 
 body {
   margin: 0;
+  height: 100vh;
   background-color: #111;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 50px minmax(0, 1fr) 50px;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
 }
 
 header {
+  grid-area: header;
+
   min-width: 0;
-  gap: 10px;
   padding: 0 10px;
-  height: 50px;
   background-color: #2e2c5e;
   border-bottom: 2px solid #2e2c5e;
 
@@ -78,6 +87,7 @@ header {
   flex-direction: row;
   align-items: center;
   justify-content: left;
+  gap: 10px;
 }
 
 header .logo {
@@ -120,32 +130,37 @@ header form .searchIcon {
 header form input {
   border: none;
   background-color: transparent;
-  flex: 1 1 auto
+  flex: 1 1 auto;
 }
 
 header form input:focus {
   outline: none;
 }
 
-.popup {
-  border-radius: 10px;
-  border: none;
-  padding: 0;
-  background-color: #111;
-  width: min(1200px, 100%);
-  height: min(750px, 100%);
+main {
+  grid-area: main;
+  min-height: 0;
+  height: 100%;
 
-  display: grid;
-  grid-template-columns: 1fr 3fr 260px;
-  grid-template-rows: 50px 1fr 60px;
-  grid-template-areas:
-    "game-title skin-title prev-title"
-    "game-list  skin-list  preview   "
-    "footer     footer     footer    ";
-  overflow: hidden;
+  margin: 0 auto;
+  max-width: 1280px;
+  min-height: 0;
 }
 
-.popup .subtitle {
+.layout {
+  background-color: #111;
+  min-height: 0;
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 3fr 260px;
+  grid-template-rows: 50px minmax(0, 1fr);
+  grid-template-areas:
+    "game-title skin-title prev-title"
+    "game-list  skin-list  preview   ";
+}
+
+.layout .subtitle {
   font-size: 20px;
   background-color: #454088;
 
@@ -155,21 +170,21 @@ header form input:focus {
   justify-content: center;
 }
 
-.popup .game-list-title {
+.layout .game-list-title {
   grid-area: game-title;
 }
 
-.popup .skins-list-title {
+.layout .skins-list-title {
   grid-area: skin-title;
   border-left: 2px solid #2e2c5e;
   border-right: 2px solid #2e2c5e;
 }
 
-.popup .preview-title {
+.layout .preview-title {
   grid-area: prev-title;
 }
 
-.popup .game-list {
+.layout .game-list {
   grid-area: game-list;
   overflow-y: scroll;
   overflow-x: hidden;
@@ -200,11 +215,11 @@ header form input:focus {
   background-color: #217ebd;
 }
 
-.popup .game-list-loading {
+.layout .game-list-loading {
   grid-area: game-list;
 }
 
-.popup .skin-list {
+.layout .skin-list {
   grid-area: skin-list;
   border-left: 2px solid #1e1e1e;
   border-right: 2px solid #1e1e1e;
@@ -307,7 +322,7 @@ header form input:focus {
   content: " px";
 }
 
-.popup .preview {
+.layout .preview {
   grid-area: preview;
   background-color: black;
 
@@ -317,7 +332,7 @@ header form input:focus {
   justify-content: center;
 }
 
-.popup .footer {
+footer {
   grid-area: footer;
   background-color: #1e1e1e;
 
