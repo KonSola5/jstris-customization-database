@@ -1,4 +1,3 @@
-let database;
 /** @typedef {{date: (string | ""), name: (string | ""), author: (string | ""), size: (number | ""), link: string}} Skin */
 /** @typedef {Object.<string, Skin[]>} Database */
 
@@ -7,8 +6,12 @@ class DatabaseManager {
   database = {};
   /** @type {string[]} */
   categories = [];
+  /** @type {HTMLLIElement[]} */
+  categoryListItems = [];
   /** @type {Skin[]} */
   searchResults = [];
+  /** @type {boolean} */
+  searching = false;
   /** @type {(HTMLLIElement | null)} */
   lastSelectedCategory = null;
 
@@ -16,6 +19,7 @@ class DatabaseManager {
     this.database = database;
     this.categories = ["Search results"].concat(Object.keys(this.database));
     this.initCategories();
+    this.categoryListItems = document.getElementById("game-list").children;
     this.switchCategory(1);
   }
 
@@ -25,12 +29,7 @@ class DatabaseManager {
     this.categories.forEach((category, index) => {
       let listItem = document.createElement("li");
       listItem.textContent = category;
-      listItem.onclick = (event) => {
-        if (self.lastSelectedCategory) self.lastSelectedCategory.classList.remove("selected");
-        self.switchCategory(index);
-        event.target.classList.add("selected");
-        self.lastSelectedCategory = event.target;
-      };
+      listItem.onclick = (event) => self.switchCategory(index);
       listItems.push(listItem);
     });
     document.getElementById("game-list").replaceChildren(...listItems);
@@ -38,6 +37,12 @@ class DatabaseManager {
 
   /** @param {number} categoryIndex */
   switchCategory(categoryIndex) {
+    if (this.lastSelectedCategory) this.lastSelectedCategory.classList.remove("selected");
+    this.categoryListItems[categoryIndex].classList.add("selected");
+    this.lastSelectedCategory = this.categoryListItems[categoryIndex];
+
+    document.getElementById("skin-list-title").textContent = this.categories[categoryIndex];
+
     let listToShow = categoryIndex === 0 ? this.searchResults : this.database[this.categories[categoryIndex]];
     let listItems = [];
     listToShow.forEach((skin) => {
@@ -105,6 +110,54 @@ class DatabaseManager {
 
     document.getElementById("skin-list").replaceChildren(...listItems);
   }
+
+  /** @param {string} query  */
+  // async, because search may take some time
+  async search(query) {
+    if (this.searching) throw new Error("A search is currently ongoing.");
+
+    this.searchResults = [];
+    let searchResults = [];
+    let splitQuery = query.split(" ");
+    // case insensitive, user shouldn't be able to search by regex
+    let regexes = splitQuery.map((word) => new RegExp(`(?:^|\\W)${word.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, "\\$&")}(?:$|\\W)`, "i"));
+
+    this.searching = true;
+    Object.keys(this.database).forEach((category) => {
+      this.database[category].forEach((skin) => {
+        let score = 0;
+        regexes.forEach((regex) => {
+          // TODO: Factor tags in and reward them with points towards sorting.
+          if (regex.test(skin.name)) {
+            score++;
+            regex.lastIndex = 0;
+          }
+        });
+        if (score > 0) {
+          searchResults.push({ skin: skin, score: score });
+        }
+      });
+    });
+
+    // Sort by score, then alphabetically by name
+    let collator = new Intl.Collator()
+    searchResults.sort((skin1, skin2) => {
+      let [score1, score2] = [skin1.score, skin2.score];
+      let [name1, name2] = [skin1.skin.name, skin2.skin.name];
+      if (score1 < score2) return 1;
+      if (score1 > score2) return -1;
+      if (score1 === score2) {
+        return collator.compare(name1, name2);
+      }
+      return 0;
+    });
+
+    searchResults.forEach(result => {
+      this.searchResults.push(result.skin)
+    });
+
+    this.searching = false;
+  }
 }
 
 fetch("jstrisCustomizationDatabase.json", { cache: "reload" })
@@ -115,7 +168,17 @@ fetch("jstrisCustomizationDatabase.json", { cache: "reload" })
     return response.json();
   })
   .then((json) => {
-    database = new DatabaseManager(json);
+    let database = new DatabaseManager(json);
+
+    document.getElementById("search").addEventListener("submit", (event) => {
+      let query = document.getElementById("search-input").value;
+      
+      database.search(query).then(() => {
+        database.switchCategory(0);
+      })
+
+      event.preventDefault();
+    })
   })
   .catch((error) => {
     console.error("An error occured:\n" + error);

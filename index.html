@@ -10,7 +10,7 @@
     <header>
       <img class="logo" src="assets/jstris-logo.png" />
       <h1 class="title">Jstris Customization Database</h1>
-      <form>
+      <form id="search">
         <svg class="searchIcon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             fill-rule="evenodd"
@@ -19,13 +19,13 @@
             fill="currentColor"
           />
         </svg>
-        <input type="text" />
+        <input id="search-input" type="text" />
       </form>
     </header>
     <main>
       <div id="layout" class="layout">
-        <div class="subtitle game-list-title">Games</div>
-        <div class="subtitle skins-list-title">Current game name and search here</div>
+        <div class="subtitle game-list-title">Categories</div>
+        <div id="skin-list-title" class="subtitle skins-list-title"></div>
         <div class="subtitle preview-title">Preview</div>
         <menu id="game-list" class="game-list"> </menu>
         <!-- <div class="gameListLoading">Loading...</div> -->
@@ -35,7 +35,11 @@
         </div>
       </div>
     </main>
-    <footer></footer>
+    <footer>
+      <button>Button</button>
+      <button class="confirm">Confirm</button>
+      <button class="cancel">Cancel</button>
+    </footer>
     <script src="js/script.js"></script>
   </body>
 </html>

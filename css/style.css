@@ -1,3 +1,54 @@
+/** Color definitions **/
+:root {
+  /* Red */
+  --red-h: 0;
+  --red-s: 100%;
+  --red-l: 50%;
+
+  --red-100: hsl(var(--red-h), var(--red-s), var(--red-l));
+  --red-90: hsl(var(--red-h), var(--red-s), calc(var(--red-l) * 0.9));
+  --red-80: hsl(var(--red-h), var(--red-s), calc(var(--red-l) * 0.8));
+  --red-70: hsl(var(--red-h), var(--red-s), calc(var(--red-l) * 0.7));
+  --red-60: hsl(var(--red-h), var(--red-s), calc(var(--red-l) * 0.6));
+  --red-50: hsl(var(--red-h), var(--red-s), calc(var(--red-l) * 0.5));
+  --red-40: hsl(var(--red-h), var(--red-s), calc(var(--red-l) * 0.4));
+  --red-30: hsl(var(--red-h), var(--red-s), calc(var(--red-l) * 0.3));
+  --red-20: hsl(var(--red-h), var(--red-s), calc(var(--red-l) * 0.2));
+  --red-10: hsl(var(--red-h), var(--red-s), calc(var(--red-l) * 0.1));
+
+  /* Green */
+  --green-h: 120;
+  --green-s: 100%;
+  --green-l: 25%;
+
+  --green-100: hsl(var(--green-h), var(--green-s), var(--green-l));
+  --green-90: hsl(var(--green-h), var(--green-s), calc(var(--green-l) * 0.9));
+  --green-80: hsl(var(--green-h), var(--green-s), calc(var(--green-l) * 0.8));
+  --green-70: hsl(var(--green-h), var(--green-s), calc(var(--green-l) * 0.7));
+  --green-60: hsl(var(--green-h), var(--green-s), calc(var(--green-l) * 0.6));
+  --green-50: hsl(var(--green-h), var(--green-s), calc(var(--green-l) * 0.5));
+  --green-40: hsl(var(--green-h), var(--green-s), calc(var(--green-l) * 0.4));
+  --green-30: hsl(var(--green-h), var(--green-s), calc(var(--green-l) * 0.3));
+  --green-20: hsl(var(--green-h), var(--green-s), calc(var(--green-l) * 0.2));
+  --green-10: hsl(var(--green-h), var(--green-s), calc(var(--green-l) * 0.1));
+
+  /* Cyan */
+  --cyan-h: 180;
+  --cyan-s: 100%;
+  --cyan-l: 27%;
+
+  --cyan-100: hsl(var(--cyan-h), var(--cyan-s), var(--cyan-l));
+  --cyan-90: hsl(var(--cyan-h), var(--cyan-s), calc(var(--cyan-l) * 0.9));
+  --cyan-80: hsl(var(--cyan-h), var(--cyan-s), calc(var(--cyan-l) * 0.8));
+  --cyan-70: hsl(var(--cyan-h), var(--cyan-s), calc(var(--cyan-l) * 0.7));
+  --cyan-60: hsl(var(--cyan-h), var(--cyan-s), calc(var(--cyan-l) * 0.6));
+  --cyan-50: hsl(var(--cyan-h), var(--cyan-s), calc(var(--cyan-l) * 0.5));
+  --cyan-40: hsl(var(--cyan-h), var(--cyan-s), calc(var(--cyan-l) * 0.4));
+  --cyan-30: hsl(var(--cyan-h), var(--cyan-s), calc(var(--cyan-l) * 0.3));
+  --cyan-20: hsl(var(--cyan-h), var(--cyan-s), calc(var(--cyan-l) * 0.2));
+  --cyan-10: hsl(var(--cyan-h), var(--cyan-s), calc(var(--cyan-l) * 0.1));
+}
+
 * {
   font-family: "Exo 2", sans-serif;
   color: #f1f1f1;
@@ -6,53 +57,53 @@
 button {
   font-size: 16px;
   padding: 10px 15px;
-  background-color: hsl(180, 100%, 27%);
-  border: 2px solid hsl(180, 100%, 20%);
+  background-color: var(--cyan-100);
+  border: 2px solid var(--cyan-80);
   border-radius: 5px;
 }
 
 button:hover {
-  background-color: hsl(180, 100%, 20%);
-  border: 2px solid hsl(180, 100%, 15%);
+  background-color: var(--cyan-80);
+  border: 2px solid var(--cyan-60);
 
   cursor: pointer;
 }
 
 button:active {
-  background-color: hsl(180, 100%, 13%);
-  border: 2px solid hsl(180, 100%, 10%);
+  background-color: var(--cyan-60);
+  border: 2px solid var(--cyan-40);
 }
 
 button.confirm {
-  background-color: hsl(120, 100%, 25%);
-  border: 2px solid hsl(120, 100%, 18%);
+  background-color: var(--green-100);
+  border: 2px solid var(--green-80);
   border-radius: 5px;
 }
 
 button.confirm:hover {
-  background-color: hsl(120, 100%, 18%);
-  border: 2px solid hsl(120, 100%, 14%);
+  background-color: var(--green-80);
+  border: 2px solid var(--green-60);
 }
 
 button.confirm:active {
-  background-color: hsl(120, 100%, 12%);
-  border: 2px solid hsl(120, 100%, 9%);
+  background-color: var(--green-60);
+  border: 2px solid var(--green-40);
 }
 
 button.cancel {
-  background-color: hsl(0, 100%, 50%);
-  border: 2px solid hsl(0, 100%, 40%);
+  background-color: var(--red-100);
+  border: 2px solid var(--red-80);
   border-radius: 5px;
 }
 
 button.cancel:hover {
-  background-color: hsl(0, 100%, 32%);
-  border: 2px solid hsl(0, 100%, 25%);
+  background-color: var(--red-80);
+  border: 2px solid var(--red-60);
 }
 
 button.cancel:active {
-  background-color: hsl(0, 100%, 25%);
-  border: 2px solid hsl(0, 100%, 20%);
+  background-color: var(--red-60);
+  border: 2px solid var(--red-40);
 }
 
 menu {
@@ -186,7 +237,7 @@ main {
 
 .layout .game-list {
   grid-area: game-list;
-  overflow-y: scroll;
+  overflow-y: auto;
   overflow-x: hidden;
 }
 
@@ -224,7 +275,7 @@ main {
   border-left: 2px solid #1e1e1e;
   border-right: 2px solid #1e1e1e;
 
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 
 .skin-list li {
