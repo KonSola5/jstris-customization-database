@@ -1,32 +1,11 @@
 {
   "Tetris Friends": [
     {
-      "date": "2019-03-14",
-      "name": "TF Chocolate (screenshotted)",
-      "author": "Eddie",
-      "size": 45,
-      "link": "https://i.imgur.com/j6MDaH1.png"
-    },
-    {
       "date": "2019-03-15",
       "name": "TF Default",
       "author": "Tetris Online, Inc.",
       "size": 36,
       "link": "https://i.imgur.com/HqGYC5G.png"
-    },
-    {
-      "date": "2019-03-15",
-      "name": "TF Lovey Dovey (screenshotted)",
-      "author": "Eddie",
-      "size": 45,
-      "link": "https://i.imgur.com/IxszoKZ.png"
-    },
-    {
-      "date": "2019-11-18",
-      "name": "TF Acorn Drop ",
-      "author": "Tetris Online, Inc.",
-      "size": 36,
-      "link": "https://i.imgur.com/Qrc880r.png"
     },
     {
       "date": "2019-11-18",
@@ -538,6 +517,13 @@
       "author": "Tetris Online, Inc.",
       "size": 36,
       "link": "https://i.imgur.com/YVjnmR6.png"
+    },
+    {
+      "date": "2019-11-18",
+      "name": "TF Acorn Drop ",
+      "author": "Tetris Online, Inc.",
+      "size": 36,
+      "link": "https://i.imgur.com/Qrc880r.png"
     }
   ],
   "Tetris (Electronica 60)": [
