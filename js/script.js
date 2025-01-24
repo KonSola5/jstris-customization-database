@@ -140,7 +140,7 @@ class DatabaseManager {
     });
 
     // Sort by score, then alphabetically by name
-    let collator = new Intl.Collator()
+    let collator = new Intl.Collator(undefined, {numeric: true, sensitivity: 'base'})
     searchResults.sort((skin1, skin2) => {
       let [score1, score2] = [skin1.score, skin2.score];
       let [name1, name2] = [skin1.skin.name, skin2.skin.name];
