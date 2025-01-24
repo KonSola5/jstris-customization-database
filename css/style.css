@@ -54,6 +54,20 @@
   color: #f1f1f1;
 }
 
+.hidden {
+  display: none !important;
+}
+
+/* Allows for stacking elements inside. */
+.stack {
+  display: grid;
+}
+
+/* Put everything in the first grid cell. */
+.stack > * {
+  grid-area: 1/1;
+}
+
 button {
   font-size: 16px;
   padding: 10px 15px;
@@ -166,7 +180,7 @@ header form {
 
 header form * {
   color: #111;
-  font-size: 16px;
+  font-size: 20px;
 }
 
 header form:focus-within {
@@ -278,6 +292,35 @@ main {
   overflow-y: auto;
 }
 
+.layout .no-results {
+  grid-area: skin-list;
+  border-left: 2px solid #1e1e1e;
+  border-right: 2px solid #1e1e1e;
+
+  overflow-y: hidden;
+
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+
+.no-results .inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+
+.no-results strong {
+  text-align: center;
+  font-size: 40px;
+}
+
+.no-results span {
+  text-align: center;
+  font-size: 30px;
+}
+
 .skin-list li {
   padding: 10px;
   display: grid;
@@ -373,6 +416,14 @@ main {
   content: " px";
 }
 
+.skin-list li.selected {
+  background-color: #3498db;
+}
+
+.skin-list li.selected:hover {
+  background-color: #217ebd;
+}
+
 .layout .preview {
   grid-area: preview;
   background-color: black;
@@ -381,6 +432,11 @@ main {
   flex-direction: row;
   align-items: center;
   justify-content: center;
+}
+
+.preview .background {
+  width: 242px;
+  height: 480px;
 }
 
 footer {

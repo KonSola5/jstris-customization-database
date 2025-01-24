@@ -19,7 +19,7 @@
             fill="currentColor"
           />
         </svg>
-        <input id="search-input" type="text" />
+        <input id="search-input" type="text" placeholder="Search..." />
       </form>
     </header>
     <main>
@@ -28,10 +28,18 @@
         <div id="skin-list-title" class="subtitle skins-list-title"></div>
         <div class="subtitle preview-title">Preview</div>
         <menu id="game-list" class="game-list"> </menu>
-        <!-- <div class="gameListLoading">Loading...</div> -->
         <menu id="skin-list" class="skin-list"> </menu>
+        <div id="no-results" class="no-results hidden">
+          <div class="inner">
+            <strong>No results</strong>
+            <span>Check your search query and try again.</span>
+          </div>
+        </div>
         <div class="preview">
-          <img src="images/mock_boardstate.png" />
+          <div class="stack">
+            <img class="background" src="assets/jstris-grid.png" alt="Jstris background grid."/>
+            <canvas id="matrix" width="242" height="480">Example Jstris stack.</canvas>
+          </div>
         </div>
       </div>
     </main>
