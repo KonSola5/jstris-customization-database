@@ -111,7 +111,7 @@ class DatabaseManager {
         skin.badges.forEach((badge) => {
           let badgeSpan = document.createElement("span");
           badgeSpan.classList.add("badge");
-          switch (badge) {
+          switch (badge.toLowerCase()) {
             case "connected": {
               badgeSpan.classList.add("connected");
               badgeSpan.textContent = "Connected";
