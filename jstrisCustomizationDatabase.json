@@ -2437,92 +2437,6 @@
       "link": "https://i.imgur.com/Y6oYgNQ.png"
     }
   ],
-  "Other Tetris ports": [
-    {
-      "date": "2019-04-14",
-      "name": "Tetris (Macintosh)",
-      "author": "Superjustinbros",
-      "size": 32,
-      "link": "https://i.imgur.com/HZc94pW.png"
-    },
-    {
-      "date": "2019-04-14",
-      "name": "Tetris (Commodore 64, 576 KByte version)",
-      "author": "Superjustinbros",
-      "size": 32,
-      "link": "https://i.imgur.com/9HHcwVJ.png"
-    },
-    {
-      "date": "2019-05-22",
-      "name": "Tetris (Microsoft Entertainment Pack)",
-      "author": "Dave Edson",
-      "size": 40,
-      "link": "https://i.imgur.com/SVujzuT.png"
-    },
-    {
-      "date": "2019-05-22",
-      "name": "Tetris 2.00 (Microsoft Entertainment Pack)",
-      "author": "Dave Edson",
-      "size": 40,
-      "link": "https://i.imgur.com/fOt2TXj.png"
-    },
-    {
-      "date": "2020-08-07",
-      "name": "Tetris (1993, Amiga)",
-      "author": "Digital (Quartz)",
-      "size": 32,
-      "link": "https://i.imgur.com/uL2UWUn.png"
-    },
-    {
-      "date": "2020-08-09",
-      "name": "Tetris (FM77AV)",
-      "author": "Bullet-Proof Software, Inc.",
-      "size": 32,
-      "link": "https://i.imgur.com/k7FnlhB.png"
-    },
-    {
-      "date": "2020-08-07",
-      "name": "Tetris (Amiga 500)",
-      "author": "Lavasoft (Lars Vandenbergh)",
-      "size": 40,
-      "link": "https://i.imgur.com/vK2Y8Dp.png"
-    },
-    {
-      "date": "2019-06-07",
-      "name": "Tetris (1988) Apple IIGS ",
-      "author": "Spectrum HoloByte",
-      "size": 32,
-      "link": "https://i.imgur.com/ckXPGTK.png"
-    },
-    {
-      "date": "2019-06-08",
-      "name": "Tetris (1988) Commodore 64",
-      "author": "Mirrorsoft",
-      "size": 32,
-      "link": "https://i.imgur.com/r9Kz1n2.png"
-    },
-    {
-      "date": "2019-06-08",
-      "name": "Tetris (1988) Famicom",
-      "author": "Bullet-Proof Software",
-      "size": 32,
-      "link": "https://i.imgur.com/ME6OyfG.png"
-    },
-    {
-      "date": "2019-07-13",
-      "name": "Tetris Jr Skin",
-      "author": "Rich ¥Weeds¥ Nagel",
-      "size": 48,
-      "link": "https://i.imgur.com/NLJKJYe.png"
-    },
-    {
-      "date": "2019-12-02",
-      "name": "Tetris S (SEGA Saturn)",
-      "author": "Bullet-Proof Software, Inc.",
-      "size": 32,
-      "link": "https://i.imgur.com/uFI0fTX.png"
-    }
-  ],
   "Tetris 2": [
     {
       "date": "2019-04-14",
@@ -2825,64 +2739,6 @@
       "author": "Tetris Online, Inc.",
       "size": 32,
       "link": "https://i.imgur.com/uY7H3Mn.png"
-    }
-  ],
-  "Other Guideline Tetris games": [
-    {
-      "date": "2019-03-27",
-      "name": "QQ Tetris",
-      "author": "egguu",
-      "size": 32,
-      "link": "https://i.imgur.com/VoaITGT.png"
-    },
-    {
-      "date": "2019-11-30",
-      "name": "Tetris Burst (2016)",
-      "author": "GSN Games",
-      "size": 45,
-      "link": "https://i.imgur.com/7oyIPII.png"
-    },
-    {
-      "date": "2019-05-12",
-      "name": "Tetris Evolution (2007)",
-      "author": "Mass Media, Inc.",
-      "size": 32,
-      "link": "https://i.imgur.com/LFV24ge.png"
-    },
-    {
-      "date": "2019-05-16",
-      "name": "Tetris Twist (2016)",
-      "author": "CoolGames Studio",
-      "size": 51,
-      "link": "https://i.imgur.com/RsmkY2m.png"
-    },
-    {
-      "date": "2019-05-16",
-      "name": "Tetris Battle Drop (2016)",
-      "author": "Tetris Online, Inc.",
-      "size": 32,
-      "link": "https://i.imgur.com/YnRsmzw.png"
-    },
-    {
-      "date": "2020-08-09",
-      "name": "Tetris Twin (Touch Screen)",
-      "author": "",
-      "size": 32,
-      "link": "https://i.imgur.com/ywDEsZN.png"
-    },
-    {
-      "date": "2019-06-01",
-      "name": "Tetris Battle: Fusion TF Offline Heart Minos",
-      "author": "iSlammedMyKindle",
-      "size": 32,
-      "link": "https://i.imgur.com/X3q1MrW.png"
-    },
-    {
-      "date": "2019-07-13",
-      "name": "Tetris Mania Skin",
-      "author": "Rich ¥Weeds¥ Nagel",
-      "size": 48,
-      "link": "https://i.imgur.com/h2MxeKZ.png"
     }
   ],
   "Tetris Super Jackpots": [
@@ -6059,6 +5915,129 @@
       "link": "https://i.imgur.com/wCVciCj.png"
     }
   ],
+  "Other Guideline Tetris games": [
+    {
+      "date": "2019-11-30",
+      "name": "Tetris Burst (2016)",
+      "author": "GSN Games",
+      "size": 45,
+      "link": "https://i.imgur.com/7oyIPII.png"
+    },
+    {
+      "date": "2019-05-12",
+      "name": "Tetris Evolution (2007)",
+      "author": "Mass Media, Inc.",
+      "size": 32,
+      "link": "https://i.imgur.com/LFV24ge.png"
+    },
+    {
+      "date": "2019-05-16",
+      "name": "Tetris Twist (2016)",
+      "author": "CoolGames Studio",
+      "size": 51,
+      "link": "https://i.imgur.com/RsmkY2m.png"
+    },
+    {
+      "date": "2019-05-16",
+      "name": "Tetris Battle Drop (2016)",
+      "author": "Tetris Online, Inc.",
+      "size": 32,
+      "link": "https://i.imgur.com/YnRsmzw.png"
+    },
+    {
+      "date": "2020-08-09",
+      "name": "Tetris Twin (Touch Screen)",
+      "author": "",
+      "size": 32,
+      "link": "https://i.imgur.com/ywDEsZN.png"
+    },
+    {
+      "date": "2019-06-01",
+      "name": "Tetris Battle: Fusion TF Offline Heart Minos",
+      "author": "iSlammedMyKindle",
+      "size": 32,
+      "link": "https://i.imgur.com/X3q1MrW.png"
+    },
+    {
+      "date": "2019-07-13",
+      "name": "Tetris Mania Skin",
+      "author": "Rich ¥Weeds¥ Nagel",
+      "size": 48,
+      "link": "https://i.imgur.com/h2MxeKZ.png"
+    }
+  ],
+  "Other Tetris ports": [
+    {
+      "date": "2019-04-14",
+      "name": "Tetris (Macintosh)",
+      "author": "Superjustinbros",
+      "size": 32,
+      "link": "https://i.imgur.com/HZc94pW.png"
+    },
+    {
+      "date": "2019-04-14",
+      "name": "Tetris (Commodore 64, 576 KByte version)",
+      "author": "Superjustinbros",
+      "size": 32,
+      "link": "https://i.imgur.com/9HHcwVJ.png"
+    },
+    {
+      "date": "2019-05-22",
+      "name": "Tetris (Microsoft Entertainment Pack)",
+      "author": "Dave Edson",
+      "size": 40,
+      "link": "https://i.imgur.com/SVujzuT.png"
+    },
+    {
+      "date": "2019-05-22",
+      "name": "Tetris 2.00 (Microsoft Entertainment Pack)",
+      "author": "Dave Edson",
+      "size": 40,
+      "link": "https://i.imgur.com/fOt2TXj.png"
+    },
+    {
+      "date": "2020-08-09",
+      "name": "Tetris (FM77AV)",
+      "author": "Bullet-Proof Software, Inc.",
+      "size": 32,
+      "link": "https://i.imgur.com/k7FnlhB.png"
+    },
+    {
+      "date": "2019-06-07",
+      "name": "Tetris (1988) Apple IIGS ",
+      "author": "Spectrum HoloByte",
+      "size": 32,
+      "link": "https://i.imgur.com/ckXPGTK.png"
+    },
+    {
+      "date": "2019-06-08",
+      "name": "Tetris (1988) Commodore 64",
+      "author": "Mirrorsoft",
+      "size": 32,
+      "link": "https://i.imgur.com/r9Kz1n2.png"
+    },
+    {
+      "date": "2019-06-08",
+      "name": "Tetris (1988) Famicom",
+      "author": "Bullet-Proof Software",
+      "size": 32,
+      "link": "https://i.imgur.com/ME6OyfG.png"
+    },
+    {
+      "date": "2019-07-13",
+      "name": "Tetris Jr Skin",
+      "author": "Rich ¥Weeds¥ Nagel",
+      "size": 48,
+      "link": "https://i.imgur.com/NLJKJYe.png"
+    },
+    {
+      "date": "2019-12-02",
+      "name": "Tetris S (SEGA Saturn)",
+      "author": "Bullet-Proof Software, Inc.",
+      "size": 32,
+      "link": "https://i.imgur.com/uFI0fTX.png"
+    }
+  ],
   "Other Tetris-like games and hacks": [
     {
       "date": "2019-04-14",
@@ -6935,6 +6914,27 @@
       "author": "Riccardo Pilloni",
       "size": 32,
       "link": "https://i.imgur.com/JzmYRyt.png"
+    },
+    {
+      "date": "2020-08-07",
+      "name": "Tetris (1993, Amiga)",
+      "author": "Digital (Quartz)",
+      "size": 32,
+      "link": "https://i.imgur.com/uL2UWUn.png"
+    },
+    {
+      "date": "2020-08-07",
+      "name": "Tetris (Amiga 500)",
+      "author": "Lavasoft (Lars Vandenbergh)",
+      "size": 40,
+      "link": "https://i.imgur.com/vK2Y8Dp.png"
+    },
+    {
+      "date": "2019-03-27",
+      "name": "QQ Tetris",
+      "author": "egguu",
+      "size": 32,
+      "link": "https://i.imgur.com/VoaITGT.png"
     }
   ],
   "Wikis": [
