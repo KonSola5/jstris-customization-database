@@ -2687,7 +2687,15 @@
   ],
   "Tetris The Grand Master": [],
   "Tetris The Grand Master 2": [],
-  "Tetris with Cardcaptor Sakura": [],
+  "Tetris with Cardcaptor Sakura": [
+    {
+      "date": "2020-06-05",
+      "name": "Tetris with Cardcaptor Sakura Eternal Heart",
+      "author": "Arika",
+      "size": 32,
+      "link": "https://i.imgur.com/iYn66Z9.png"
+    }
+  ],
   "Tetris The Grand Master 3": [
     {
       "date": "2019-05-16",
@@ -10664,13 +10672,6 @@
       "author": "Charlie Soft 1990.",
       "size": 32,
       "link": "https://i.imgur.com/TKLu3bh.png"
-    },
-    {
-      "date": "2020-06-05",
-      "name": "Tetris with Cardcaptor Sakura Eternal Heart",
-      "author": "Arika",
-      "size": 32,
-      "link": "https://i.imgur.com/iYn66Z9.png"
     },
     {
       "date": "2020-06-07",
