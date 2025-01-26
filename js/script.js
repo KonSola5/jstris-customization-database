@@ -1,5 +1,3 @@
-
-
 /** @typedef {{date: (string | ""), name: (string | ""), author: (string | ""), size: (number | ""), link: string}} Skin */
 /** @typedef {Object.<string, Skin[]>} Database */
 
