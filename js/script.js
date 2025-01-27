@@ -52,6 +52,7 @@ class DatabaseManager {
 
   /** @param {number} categoryIndex */
   switchCategory(categoryIndex) {
+    if (this.lastSelectedCategory == categoryIndex) return;
     if (this.lastSelectedCategory) this.lastSelectedCategory.classList.remove("selected");
     this.categoryListItems[categoryIndex].classList.add("selected");
     this.lastSelectedCategory = this.categoryListItems[categoryIndex];
@@ -72,6 +73,7 @@ class DatabaseManager {
         listItem.classList.add("selected");
       }
       listItem.onclick = (event) => {
+        if (listItem.classList.contains("selected")) return;
         this.selectedSkin = {
           category: categoryIndex,
           index: index,
