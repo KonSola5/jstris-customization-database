@@ -367,8 +367,10 @@ class Preview {
 
   changeSkin(url, connectedMethod) {
     if (url.slice(-4) == ".gif") {
+      document.getElementById("preview-loading").classList.remove("hidden")
       this.gif = new GIF();
       this.gif.loadURL(url).then(() => {
+        document.getElementById("preview-loading").classList.add("hidden")
         this.skinBlockSize = this.gif.width / 9;
         this.connectedMethod = connectedMethod;
         this.gif.onEachFrame((gifCanvas) => {

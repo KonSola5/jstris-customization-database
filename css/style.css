@@ -439,6 +439,19 @@ main {
   height: 480px;
 }
 
+.loading-box {
+  align-self: center;
+  justify-self: center;
+  background-color: #000d;
+  border-radius: 10px;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  justify-items: center;
+  gap: 10px;
+}
+
 footer {
   grid-area: footer;
   background-color: #1e1e1e;

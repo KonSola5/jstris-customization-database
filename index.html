@@ -2,6 +2,7 @@
 <html>
   <head>
     <link href="css/exo2.css" rel="stylesheet" />
+    <link href="css/spinner.css" rel="stylesheet" />
     <link href="css/style.css" rel="stylesheet" />
     <link rel="shortcut icon" type="image/x-icon" href="assets/favicon.ico" />
     <title>Jstris Customization Database</title>
@@ -37,8 +38,25 @@
         </div>
         <div class="preview">
           <div class="stack">
-            <img class="background" src="assets/jstris-grid.png" alt="Jstris background grid."/>
+            <img class="background" src="assets/jstris-grid.png" alt="Jstris background grid." />
             <canvas id="matrix" width="242" height="480">Example Jstris stack.</canvas>
+            <div id="preview-loading" class="loading-box hidden">
+              <div class="lds-spinner">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+              <span>Loading...</span>
+            </div>
           </div>
           <!-- <canvas id="gifDebug">Debug for the GIF skin source.</canvas> -->
         </div>
