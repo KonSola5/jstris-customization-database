@@ -82,7 +82,7 @@ class DatabaseManager {
         listItem.classList.add("selected");
         if (this.lastSelectedSkin) this.lastSelectedSkin.classList.remove("selected");
         this.lastSelectedSkin = listItem;
-      }
+      };
       // TODO: Make list items selectable
       let nameAndSkin = document.createElement("div");
       nameAndSkin.classList.add("name-and-skin");
@@ -266,7 +266,7 @@ class Preview {
   blockSize = 24;
 
   skinBlockSize = 24;
-  /** @type {HTMLImageElement | null} */
+  /** @type {HTMLImageElement | OffscreenCanvas | HTMLCanvasElement | null} */
   selectedSkin = null;
   connectedMethod = null;
 
@@ -366,28 +366,40 @@ class Preview {
   }
 
   changeSkin(url, connectedMethod) {
-    let skin = new Image();
-    skin.crossOrigin = "anonymous";
-    skin.src = url;
-    skin.onload = (event) => {
-      switch (connectedMethod) {
-        // TODO: Jstris+ and Jstris Extras connected skins
-        default: {
-          this.skinBlockSize = skin.naturalWidth / 9;
-          this.selectedSkin = skin;
-          this.connectedMethod = connectedMethod;
+    if (url.slice(-4) == ".gif") {
+      this.gif = new GIF();
+      this.gif.loadURL(url).then(() => {
+        this.skinBlockSize = this.gif.width / 9;
+        this.connectedMethod = connectedMethod;
+        this.gif.onEachFrame((gifCanvas) => {
+          this.selectedSkin = gifCanvas;
           this.redrawMatrix();
+        });
+      });
+    } else {
+      if (this.gif) this.gif.stop();
+      this.gif = null;
+      let skin = new Image();
+      skin.crossOrigin = "anonymous";
+      skin.src = url;
+      skin.onload = (event) => {
+        switch (connectedMethod) {
+          // TODO: Jstris+ and Jstris Extras connected skins
+          default: {
+            this.skinBlockSize = skin.naturalWidth / 9;
+            this.selectedSkin = skin;
+            this.connectedMethod = connectedMethod;
+            this.redrawMatrix();
+          }
         }
-      }
-    };
+      };
+    }
   }
 }
 let preview = new Preview();
 fetch("jstrisCustomizationDatabase.json", { cache: "reload" })
   .then((response) => {
-    if (!response.ok) {
-      throw new Error(`HTTP error: ${response.status}`);
-    }
+    if (!response.ok) throw new Error(`HTTP error whilst loading the database: ${response.status}`);
     return response.json();
   })
   .then((json) => afterSuccessfulFetch(json))
@@ -404,4 +416,161 @@ function afterSuccessfulFetch(json) {
     });
     event.preventDefault();
   });
+}
+
+/**
+ * Processes the GIF image and animates it on a canvas.
+ * This is a singleton class - attempting to create another instance will return the first instance.
+ *
+ * Modified version of https://github.com/deanm/omggif/pull/31.
+ */
+class GIF {
+  /** @type */
+  reader;
+  /** @type {OffscreenCanvas | HTMLCanvasElement} */
+  canvas;
+  /** @type {CanvasRenderingContext2D} */
+  ctx;
+  /** @type {number} */
+  width;
+  /** @type {number} */
+  height;
+  /** @type {number} */
+  frameNumber;
+  /** @type */
+  previousFrameInfo;
+  /** @type {ImageData} */
+  previousImageData;
+  /** @type {number} */
+  loops;
+  /** @type {number} */
+  lastDelay = 0;
+  /** @type {number} */
+  animationHandle;
+  /**
+   * @type {number}
+   * The initial timer of the animation.
+   */
+  t0;
+
+  constructor() {
+    // Sigleton, attempting to create another instance will return the same instance
+    if (GIF._instance) return GIF._instance;
+    GIF._instance = this;
+  }
+
+  async loadURL(url) {
+    await fetch(url)
+      .then((response) => {
+        if (!response.ok) throw new Error(`HTTP error whilst loading GIF: ${response.status}`);
+        return response.arrayBuffer();
+      })
+      .then((arrayBuffer) => {
+        let bytes = new Uint8Array(arrayBuffer);
+        this.parseGIF(bytes);
+      })
+      .catch((error) => {
+        console.error("An error occured:\n" + error);
+      });
+  }
+
+  parseGIF(bytes) {
+    this.reader = new GifReader(bytes);
+
+    this.frameNumber = 0;
+    this.loops = this.reader.loopCount();
+    this.previousFrameInfo = null;
+    this.t0 = document.timeline.currentTime;
+
+    cancelAnimationFrame(this.animationHandle);
+    if (!this.canvas) {
+      if (!OffscreenCanvas) this.canvas = document.createElement("canvas");
+      else this.canvas = new OffscreenCanvas(64 * 9, 64);
+    }
+    this.width = this.canvas.width = this.reader.width;
+    this.height = this.canvas.height = this.reader.height;
+    this.ctx = this.canvas.getContext("2d");
+  }
+
+  /**
+   * @param {(gifCanvas: OffscreenCanvas | HTMLCanvasElement) => void} callback Exposes the internal GIF canvas of the current GIF frame.
+   * @param {number} timestamp Current timestamp.
+   */
+  onEachFrame(callback = () => void 0, timestamp = document.timeline.currentTime) {
+    if (timestamp - this.t0 >= this.lastDelay) {
+      // Time to draw the next frame!
+      if (!this.reader) return;
+
+      if (this.frameNumber === this.reader.numFrames()) {
+        this.frameNumber = 0;
+        if (--this.loops === 0) return; // bail if we're on the last loop
+      }
+
+      let frameInfo = this.reader.frameInfo(this.frameNumber);
+
+      if (this.frameNumber === 0) {
+        // Always clear whole canvas on the first frame
+        this.ctx.clearRect(0, 0, this.reader.width, this.reader.height);
+      }
+
+      if (this.previousFrameInfo) {
+        switch (this.previousFrameInfo.disposal) {
+          case 0:
+            break; // "No disposal specified" - do nothing, we draw over the existing canvas
+          case 1:
+            break; // "Do not dispose" - do nothing, we draw over the existing canvas
+          case 2:
+            // "Restore to background" - browsers ignore background color, so
+            // in practice it is always "Restore to transparent"
+            this.ctx.clearRect(
+              this.previousFrameInfo.x,
+              this.previousFrameInfo.y,
+              this.previousFrameInfo.width,
+              this.previousFrameInfo.height
+            );
+            break;
+          case 3:
+            // "Restore to previous" - revert back to most recent frame that was
+            // not set to "Restore to previous", or frame 0
+            if (this.previousImageData) this.ctx.putImageData(previousImageData, 0, 0);
+            break;
+          default:
+            console.error("Disposal method is unsupported");
+        }
+      }
+
+      if (this.frameNumber === 0 || frameInfo.disposal < 2) {
+        // save this frame in case we need to revert to it later
+        this.previousImageData = this.ctx.getImageData(0, 0, this.reader.width, this.reader.height);
+        this.previousImageData.frame = this.frameNumber;
+      }
+
+      // draw frame on top of existing canvas data
+      let imageData = this.ctx.getImageData(0, 0, this.reader.width, this.reader.height);
+
+      this.reader.decodeAndBlitFrameRGBA(this.frameNumber, imageData.data);
+      this.ctx.putImageData(imageData, 0, 0, frameInfo.x, frameInfo.y, frameInfo.width, frameInfo.height);
+
+      // get ready to draw next frame
+      this.previousFrameInfo = frameInfo;
+      this.frameNumber++;
+
+      // If animation was paused, update last time to current time to prevent rubberbanding
+      if (timestamp - this.t0 >= 2 * this.lastDelay) this.t0 = timestamp;
+      // Else, add last delay
+      else this.t0 = this.t0 + this.lastDelay;
+      this.lastDelay = frameInfo.delay * 10;
+
+      this.animationHandle = requestAnimationFrame((t) => this.onEachFrame(callback, t));
+
+      callback(this.canvas);
+    } else {
+      // Not drawing the next frame yet.
+      this.animationHandle = requestAnimationFrame((t) => this.onEachFrame(callback, t));
+    }
+  }
+
+  stop() {
+    cancelAnimationFrame(this.animationHandle);
+  }
 }
