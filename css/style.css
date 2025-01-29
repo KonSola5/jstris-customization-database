@@ -168,17 +168,26 @@ header .title {
 
 header form {
   border: 2px solid #111;
-  padding: 5px;
+
   background-color: #eee;
   border-radius: 10px;
   width: 500px;
-  display: flex;
-  align-items: center;
+  box-sizing: content-box;
+
+  cursor: text;
+
   margin-left: auto;
   flex-shrink: 1;
+  position: relative;
 }
 
-header form * {
+header #search-container {
+  padding: 5px;
+  display: flex;
+  align-items: center;
+}
+
+header #search-container * {
   color: #111;
   font-size: 20px;
 }
@@ -187,19 +196,69 @@ header form:focus-within {
   outline: 2px solid #217ebd;
 }
 
-header form .searchIcon {
+header #search-container .searchIcon {
   width: 25px;
   height: 25px;
 }
 
-header form input {
+header #search-container input {
   border: none;
   background-color: transparent;
   flex: 1 1 auto;
 }
 
-header form input:focus {
+header #search-container input:focus {
   outline: none;
+}
+
+header form #search-tooltip {
+  position: absolute;
+  top: calc(100% + 5px);
+  width: 100%;
+  border: 2px solid #111;
+  border-radius: 10px;
+  margin-left: -2px;
+  background-color: #1e1e1e;
+}
+
+#search-tooltip * {
+  color: #f1f1f1;
+}
+
+#search-tooltip .inner {
+  padding: 5px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5px;
+}
+
+.arrow polygon {
+  fill: #1e1e1e;
+  stroke: #111;
+  stroke-width: 2px;
+  stroke-dasharray: 14.1422px 20px 14.1422px; /* Fallback if browser does not support hypot() */
+  stroke-dasharray: calc(hypot(10px, 10px)) 20px calc(hypot(10px, 10px));
+}
+
+#search-tooltip .tip {
+  font-weight: bold;
+}
+
+#search-tooltip .user-input {
+  font-style: italic;
+}
+
+#search-tooltip .description {
+  color: hsl(0, 0%, 60%)
+}
+
+header form #search-tooltip .arrow {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  width: 20px;
+  height: 12px;
+  margin-left: -10px;
 }
 
 main {
@@ -427,6 +486,7 @@ main {
 .layout .preview {
   grid-area: preview;
   background-color: black;
+  overflow: hidden;
 
   display: flex;
   flex-direction: row;

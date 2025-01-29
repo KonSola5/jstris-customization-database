@@ -1,4 +1,4 @@
-/** @typedef {{date: (string | ""), name: (string | ""), author: (string | ""), size: (number | ""), link: string}} Skin */
+/** @typedef {{date: (string | ""), name: (string | ""), author: (string | ""), size: (number | ""), link: string, badges?: string[]}} Skin */
 /** @typedef {Object.<string, Skin[]>} Database */
 
 class DatabaseManager {
@@ -56,6 +56,7 @@ class DatabaseManager {
     if (this.lastSelectedCategory) this.lastSelectedCategory.classList.remove("selected");
     this.categoryListItems[categoryIndex].classList.add("selected");
     this.lastSelectedCategory = this.categoryListItems[categoryIndex];
+
     if (categoryIndex === 0) {
       if (this.searchResults.length === 0) document.getElementById("no-results").classList.remove("hidden");
     } else document.getElementById("no-results").classList.add("hidden");
@@ -73,6 +74,7 @@ class DatabaseManager {
         listItem.classList.add("selected");
       }
       listItem.onclick = (event) => {
+        // TODO: Another way of selecting a skin to mitigate a search issue
         if (listItem.classList.contains("selected")) return;
         this.selectedSkin = {
           category: categoryIndex,
@@ -156,24 +158,73 @@ class DatabaseManager {
 
     this.searchResults = [];
     let searchResults = [];
-    let splitQuery = query.split(" ");
+    let quoteCount = (query.match(/"/g) || []).length;
+    if (quoteCount % 2 == 1) throw new Error("The search query contains an unmatched quotation mark.");
+    let splitterRegex = /"[^"]*"|[^ ]+/g;
+    let splitQuery = [];
+    let results;
+    while ((results = splitterRegex.exec(query)) !== null) {
+      splitQuery.push(results[0]);
+    }
+    let terms = [],
+      authors = [],
+      types = [];
+    let hasAuthors = false;
+    let hasTypes = false;
+    splitQuery.forEach((word, i) => {
+      if (word.startsWith("by:")) {
+        authors.push(word.slice(3));
+        hasAuthors = true;
+      } else if (word.startsWith("is:")) {
+        types.push(word.slice(3).toLowerCase());
+        hasTypes = true;
+      } else {
+        terms.push(word.replace(/"/g, ""));
+      }
+    });
+
     // case insensitive, user shouldn't be able to search by regex
-    let regexes = splitQuery.map(
+    let termRegexes = terms.map(
+      (word) => new RegExp(`(?:^|\\W)${word.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, "\\$&")}(?:$|\\W)`, "i")
+    );
+    let authorRegexes = authors.map(
       (word) => new RegExp(`(?:^|\\W)${word.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, "\\$&")}(?:$|\\W)`, "i")
     );
 
     this.searching = true;
     Object.keys(this.database).forEach((category) => {
       this.database[category].forEach((skin) => {
-        let score = 0;
-        regexes.forEach((regex) => {
-          // TODO: Factor tags in and reward them with points towards sorting.
-          if (regex.test(skin.name)) {
-            score++;
+        let authorScore = 0,
+          typeScore = 0,
+          termScore = 0;
+        authorRegexes.forEach((regex) => {
+          if (regex.test(skin.author)) {
+            authorScore++;
             regex.lastIndex = 0;
           }
         });
-        if (score > 0) {
+        types.forEach((type) => {
+          if (skin.badges?.some((badge) => badge.toLowerCase() == type)) {
+            typeScore++;
+          }
+        });
+        termRegexes.forEach((regex) => {
+          // TODO: Factor tags in and reward them with points towards sorting.
+          if (regex.test(skin.name)) {
+            termScore++;
+            regex.lastIndex = 0;
+          }
+        });
+        let shouldResult = false;
+        if (hasAuthors && hasTypes) {
+          if (authorScore > 0 && typeScore > 0) shouldResult = true;
+        } else
+          shouldResult =
+            (hasAuthors && authorScore > 0) ||
+            (hasTypes && typeScore > 0) ||
+            (!hasAuthors && !hasTypes && termScore > 0);
+        if (shouldResult) {
+          let score = authorScore + typeScore + termScore;
           searchResults.push({ skin: skin, score: score });
         }
       });
@@ -198,6 +249,14 @@ class DatabaseManager {
     else document.getElementById("no-results").classList.add("hidden");
 
     this.searching = false;
+
+    // Temporary search issue fix.
+    this.selectedSkin = {
+      category: null,
+      index: null,
+      link: null,
+      connected: null,
+    };
   }
 }
 
@@ -369,10 +428,10 @@ class Preview {
 
   changeSkin(url, connectedMethod) {
     if (url.slice(-4) == ".gif") {
-      document.getElementById("preview-loading").classList.remove("hidden")
+      document.getElementById("preview-loading").classList.remove("hidden");
       this.gif = new GIF();
       this.gif.loadURL(url).then(() => {
-        document.getElementById("preview-loading").classList.add("hidden")
+        document.getElementById("preview-loading").classList.add("hidden");
         this.skinBlockSize = this.gif.width / 9;
         this.connectedMethod = connectedMethod;
         this.gif.onEachFrame((gifCanvas) => {
@@ -420,6 +479,13 @@ function afterSuccessfulFetch(json) {
     });
     event.preventDefault();
   });
+  document.getElementById("search").addEventListener("click", (event) => {
+    document.getElementById("search-tooltip").classList.remove("hidden")
+    document.getElementById("search-input").focus();
+  });
+  document.getElementById("search-input").addEventListener("blur", (event) => {
+    document.getElementById("search-tooltip").classList.add("hidden")
+  })
 }
 
 /**

@@ -12,15 +12,36 @@
       <img class="logo" src="assets/jstris-logo.png" />
       <h1 class="title">Jstris Customization Database</h1>
       <form id="search">
-        <svg class="searchIcon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
-            d="M4 11C4 7.13401 7.13401 4 11 4C14.866 4 18 7.13401 18 11C18 14.866 14.866 18 11 18C7.13401 18 4 14.866 4 11ZM11 2C6.02944 2 2 6.02944 2 11C2 15.9706 6.02944 20 11 20C13.125 20 15.078 19.2635 16.6177 18.0319L20.2929 21.7071C20.6834 22.0976 21.3166 22.0976 21.7071 21.7071C22.0976 21.3166 22.0976 20.6834 21.7071 20.2929L18.0319 16.6177C19.2635 15.078 20 13.125 20 11C20 6.02944 15.9706 2 11 2Z"
-            fill="currentColor"
-          />
-        </svg>
-        <input id="search-input" type="text" placeholder="Search..." />
+        <div id="search-container">
+          <svg class="searchIcon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M4 11C4 7.13401 7.13401 4 11 4C14.866 4 18 7.13401 18 11C18 14.866 14.866 18 11 18C7.13401 18 4 14.866 4 11ZM11 2C6.02944 2 2 6.02944 2 11C2 15.9706 6.02944 20 11 20C13.125 20 15.078 19.2635 16.6177 18.0319L20.2929 21.7071C20.6834 22.0976 21.3166 22.0976 21.7071 21.7071C22.0976 21.3166 22.0976 20.6834 21.7071 20.2929L18.0319 16.6177C19.2635 15.078 20 13.125 20 11C20 6.02944 15.9706 2 11 2Z"
+              fill="currentColor"
+            />
+          </svg>
+          <input id="search-input" type="text" placeholder="Search..." />
+        </div>
+        <div id="search-tooltip" class="hidden">
+          <svg class="arrow" viewBox="0 0 20 12">
+            <polygon points="10,2 20,12 0,12" />
+          </svg>
+          <div class="inner">
+            <div>
+              <span class="tip">by:</span><span class="user-input">author</span>
+              <span class="description">Search by author</span>
+            </div>
+            <div>
+              <span class="tip">is:</span><span class="user-input">type</span>
+              <span class="description">Search by skin type</span>
+            </div>
+            <div>
+              <span class="tip">"</span><span class="user-input">words here</span><span class="tip">"</span>
+              <span class="description">Exact phrase</span>
+            </div>
+          </div>
+        </div>
       </form>
     </header>
     <main>
