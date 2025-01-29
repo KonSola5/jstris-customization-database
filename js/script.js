@@ -171,15 +171,17 @@ class DatabaseManager {
       types = [];
     let hasAuthors = false;
     let hasTypes = false;
+    let hasTerms = false;
     splitQuery.forEach((word, i) => {
       if (word.startsWith("by:")) {
-        authors.push(word.slice(3));
+        authors.push(word.slice(3).replace(/"/g, ""));
         hasAuthors = true;
       } else if (word.startsWith("is:")) {
-        types.push(word.slice(3).toLowerCase());
+        types.push(word.slice(3).replace(/"/g, "").toLowerCase());
         hasTypes = true;
       } else {
         terms.push(word.replace(/"/g, ""));
+        hasTerms = true;
       }
     });
 
@@ -217,15 +219,18 @@ class DatabaseManager {
         });
         let shouldResult = false;
         if (hasAuthors && hasTypes) {
-          if (authorScore > 0 && typeScore > 0) shouldResult = true;
-        } else
-          shouldResult =
-            (hasAuthors && authorScore > 0) ||
-            (hasTypes && typeScore > 0) ||
-            (!hasAuthors && !hasTypes && termScore > 0);
+          if (authorScore > 0 && typeScore > 0) shouldResult = hasTerms ? termScore > 0 : true;
+        } else {
+          if (hasAuthors) {
+            if (authorScore > 0) shouldResult = hasTerms ? termScore > 0 : true;
+          } else if (hasTypes) {
+            if (typeScore > 0) shouldResult = hasTerms ? termScore > 0 : true;
+          } else {
+            shouldResult = hasTerms ? termScore > 0 : false;
+          }
+        }
         if (shouldResult) {
-          let score = authorScore + typeScore + termScore;
-          searchResults.push({ skin: skin, score: score });
+          searchResults.push({ skin: skin, score: termScore });
         }
       });
     });
@@ -480,12 +485,12 @@ function afterSuccessfulFetch(json) {
     event.preventDefault();
   });
   document.getElementById("search").addEventListener("click", (event) => {
-    document.getElementById("search-tooltip").classList.remove("hidden")
+    document.getElementById("search-tooltip").classList.remove("hidden");
     document.getElementById("search-input").focus();
   });
   document.getElementById("search-input").addEventListener("blur", (event) => {
-    document.getElementById("search-tooltip").classList.add("hidden")
-  })
+    document.getElementById("search-tooltip").classList.add("hidden");
+  });
 }
 
 /**
