@@ -726,11 +726,67 @@
   ],
   "Puyo Puyo Tetris": [
     {
-      "date": "2017-10-14",
-      "name": "Puyo Puyo Tetris",
-      "author": "Okey_Dokey",
-      "size": 32,
-      "link": "https://i.imgur.com/G6WbXoD.png"
+      "date": "2019-04-28",
+      "name": "PPT Default",
+      "author": "Sonic Team",
+      "size": 36,
+      "link": "https://i.imgur.com/zjItrsg.png"
+    },
+    {
+      "date": "2019-05-13",
+      "name": "PPT Panels",
+      "author": "Sonic Team",
+      "size": 36,
+      "link": "https://i.imgur.com/r8SgQM6.png"
+    },
+    {
+      "date": "2018-03-29",
+      "name": "PPT Blocks",
+      "author": "Sonic Team",
+      "size": 36,
+      "link": "https://i.imgur.com/6dXdhvQ.png"
+    },
+    {
+      "date": "2019-05-13",
+      "name": "PPT Studs",
+      "author": "Sonic Team",
+      "size": 36,
+      "link": "https://i.imgur.com/spqLg8T.png"
+    },
+    {
+      "date": "2019-04-24",
+      "name": "PPT Classic",
+      "author": "Sonic Team",
+      "size": 36,
+      "link": "https://i.imgur.com/sTfRo4v.png"
+    },
+    {
+      "date": "2019-05-13",
+      "name": "PPT Crystal ",
+      "author": "Sonic Team",
+      "size": 36,
+      "link": "https://i.imgur.com/oqlpeem.png"
+    },
+    {
+      "date": "2019-05-13",
+      "name": "PPT Dark",
+      "author": "Sonic Team",
+      "size": 36,
+      "link": "https://i.imgur.com/69CM9Y8.png"
+    },
+    {
+      "date": "2019-05-05",
+      "name": "PPT Stars",
+      "author": "Sonic Team",
+      "size": 36,
+      "link": "https://i.imgur.com/rjDFNYT.png"
+    },
+    {
+      "date": "2018-03-29",
+      "name": "PPT Faces",
+      "author": "Sonic Team",
+      "size": 36,
+      "link": "https://i.imgur.com/Q2kwMjd.png"
     },
     {
       "date": "2019-04-08",
@@ -741,144 +797,18 @@
       "badges": ["GIF"]
     },
     {
+      "date": "2019-05-13",
+      "name": "PPT Billiards ",
+      "author": "Sonic Team",
+      "size": 36,
+      "link": "https://i.imgur.com/JTZI1kM.png"
+    },
+    {
       "date": "2019-04-22",
       "name": "PPT Default Fusion",
       "author": "Sonic Team",
       "size": 48,
       "link": "https://i.imgur.com/cHweYuw.png"
-    },
-    {
-      "date": "2018-01-02",
-      "name": "PPT Billiards",
-      "author": "MattMayuga",
-      "size": 32,
-      "link": "https://i.imgur.com/AmDYqrF.png"
-    },
-    {
-      "date": "2019-04-24",
-      "name": "PPT Classic",
-      "author": "Sonic Team",
-      "size": 36,
-      "link": "https://i.imgur.com/niie2gI.png"
-    },
-    {
-      "date": "2018-03-29",
-      "name": "PPT Faces",
-      "author": "Sonic Team",
-      "size": 36,
-      "link": "https://i.imgur.com/ln7IZ1Y.png"
-    },
-    {
-      "date": "2018-03-29",
-      "name": "PPT Blocks",
-      "author": "Sonic Team",
-      "size": 36,
-      "link": "https://i.imgur.com/Oe4zswk.png"
-    },
-    {
-      "date": "2018-03-29",
-      "name": "PPT Blocks Gold",
-      "author": "Hard Drop Discord",
-      "size": 32,
-      "link": "https://i.imgur.com/AVb2kg2.png"
-    },
-    {
-      "date": "2019-04-28",
-      "name": "PPT Default",
-      "author": "Sonic Team",
-      "size": 36,
-      "link": "https://i.imgur.com/fBB6N3v.png"
-    },
-    {
-      "date": "2018-08-14",
-      "name": "PPT Puzzle Arena Mino Skin",
-      "author": "egguu",
-      "size": 36,
-      "link": "https://i.imgur.com/NOMvHF6.png"
-    },
-    {
-      "date": "2019-01-20",
-      "name": "",
-      "author": "Garbo, zukulent0",
-      "size": 36,
-      "link": "https://i.imgur.com/C9aDRbF.png"
-    },
-    {
-      "date": "2019-01-25",
-      "name": "PPT Menu Minos",
-      "author": "egguu",
-      "size": 36,
-      "link": "https://i.imgur.com/kqX8hB5.png"
-    },
-    {
-      "date": "2019-05-05",
-      "name": "PPT Stars Minos",
-      "author": "Bocifer",
-      "size": 36,
-      "link": "https://i.imgur.com/9p8k1uI.png"
-    },
-    {
-      "date": "2019-05-13",
-      "name": "PPT Billiards ",
-      "author": "Sonic Team",
-      "size": 36,
-      "link": "https://i.imgur.com/0IZ7rtY.png"
-    },
-    {
-      "date": "2019-05-13",
-      "name": "PPT Crystal ",
-      "author": "Sonic Team",
-      "size": 36,
-      "link": "https://i.imgur.com/FfvrgsO.png"
-    },
-    {
-      "date": "2019-05-13",
-      "name": "PPT Crystal Fusion",
-      "author": "Sonic Team",
-      "size": 36,
-      "link": "https://i.imgur.com/xL61b9O.png"
-    },
-    {
-      "date": "2019-05-13",
-      "name": "PPT Crystal Gold",
-      "author": "Sonic Team",
-      "size": 36,
-      "link": "https://i.imgur.com/wUk7CSQ.png"
-    },
-    {
-      "date": "2019-05-13",
-      "name": "PPT Stars Gold",
-      "author": "Sonic Team",
-      "size": 36,
-      "link": "https://i.imgur.com/I6Nem8Y.png"
-    },
-    {
-      "date": "2019-05-13",
-      "name": "PPT Dark",
-      "author": "Sonic Team",
-      "size": 36,
-      "link": "https://i.imgur.com/LpIBHyw.png"
-    },
-    {
-      "date": "2019-05-13",
-      "name": "PPT Dark Fusion",
-      "author": "Sonic Team",
-      "size": 36,
-      "link": "https://i.imgur.com/cdZiIUD.png"
-    },
-    {
-      "date": "2019-05-13",
-      "name": "PPT Dark Gold",
-      "author": "Sonic Team",
-      "size": 36,
-      "link": "https://i.imgur.com/Ul0iehs.png"
-    },
-    {
-      "date": "2019-05-13",
-      "name": "PPT Panels",
-      "author": "Sonic Team",
-      "size": 36,
-      "link": "https://i.imgur.com/yelL2fz.png"
     },
     {
       "date": "2019-05-13",
@@ -889,17 +819,31 @@
     },
     {
       "date": "2019-05-13",
+      "name": "PPT Crystal Fusion",
+      "author": "Sonic Team",
+      "size": 36,
+      "link": "https://i.imgur.com/xL61b9O.png"
+    },
+    {
+      "date": "2019-05-13",
+      "name": "PPT Dark Fusion",
+      "author": "Sonic Team",
+      "size": 36,
+      "link": "https://i.imgur.com/cdZiIUD.png"
+    },
+    {
+      "date": "2019-05-13",
       "name": "PPT Panels Gold",
       "author": "Sonic Team",
       "size": 36,
       "link": "https://i.imgur.com/XNxPzEU.png"
     },
     {
-      "date": "2019-05-13",
-      "name": "PPT Studs",
-      "author": "Sonic Team",
-      "size": 36,
-      "link": "https://i.imgur.com/1Fq7bbE.png"
+      "date": "2018-03-29",
+      "name": "PPT Blocks Gold",
+      "author": "Hard Drop Discord",
+      "size": 32,
+      "link": "https://i.imgur.com/AVb2kg2.png"
     },
     {
       "date": "2019-05-13",
@@ -907,6 +851,27 @@
       "author": "Sonic Team",
       "size": 36,
       "link": "https://i.imgur.com/s7QXYD4.png"
+    },
+    {
+      "date": "2019-05-13",
+      "name": "PPT Crystal Gold",
+      "author": "Sonic Team",
+      "size": 36,
+      "link": "https://i.imgur.com/wUk7CSQ.png"
+    },
+    {
+      "date": "2019-05-13",
+      "name": "PPT Dark Gold",
+      "author": "Sonic Team",
+      "size": 36,
+      "link": "https://i.imgur.com/Ul0iehs.png"
+    },
+    {
+      "date": "2019-05-13",
+      "name": "PPT Stars Gold",
+      "author": "Sonic Team",
+      "size": 36,
+      "link": "https://i.imgur.com/I6Nem8Y.png"
     },
     {
       "date": "2019-05-13",
@@ -943,6 +908,41 @@
       "author": "Sonic Team",
       "size": 36,
       "link": "https://i.imgur.com/PCa9XXg.png"
+    },
+    {
+      "date": "2018-08-14",
+      "name": "PPT Puzzle Arena Mino Skin",
+      "author": "egguu",
+      "size": 36,
+      "link": "https://i.imgur.com/NOMvHF6.png"
+    },
+    {
+      "date": "2019-01-25",
+      "name": "PPT Menu Minos",
+      "author": "egguu",
+      "size": 36,
+      "link": "https://i.imgur.com/kqX8hB5.png"
+    },
+    {
+      "date": "2017-10-14",
+      "name": "Puyo Puyo Tetris",
+      "author": "Okey_Dokey",
+      "size": 32,
+      "link": "https://i.imgur.com/G6WbXoD.png"
+    },
+    {
+      "date": "2018-01-02",
+      "name": "PPT Billiards",
+      "author": "MattMayuga",
+      "size": 32,
+      "link": "https://i.imgur.com/AmDYqrF.png"
+    },
+    {
+      "date": "2019-01-20",
+      "name": "",
+      "author": "Garbo, zukulent0",
+      "size": 36,
+      "link": "https://i.imgur.com/C9aDRbF.png"
     }
   ],
   "Tetris Battle": [
