@@ -160,7 +160,7 @@ class DatabaseManager {
     let searchResults = [];
     let quoteCount = (query.match(/"/g) || []).length;
     if (quoteCount % 2 == 1) throw new Error("The search query contains an unmatched quotation mark.");
-    let splitterRegex = /"[^"]*"|[^ ]+/g;
+    let splitterRegex = /[^ "]*"[^"]*"|[^ ]+/g;
     let splitQuery = [];
     let results;
     while ((results = splitterRegex.exec(query)) !== null) {
