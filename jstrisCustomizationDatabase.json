@@ -8,27 +8,6 @@
       "link": "https://i.imgur.com/HqGYC5G.png"
     },
     {
-      "date": "2019-11-18",
-      "name": "TF Burger King",
-      "author": "Tetris Online, Inc.",
-      "size": 36,
-      "link": "https://i.imgur.com/RpLfYyZ.png"
-    },
-    {
-      "date": "2019-11-18",
-      "name": "TF Foot Locker",
-      "author": "Tetris Online, Inc.",
-      "size": 36,
-      "link": "https://i.imgur.com/4Co9Ha0.png"
-    },
-    {
-      "date": "2019-11-20",
-      "name": "TF Rally 8P",
-      "author": "Tetris Online, Inc.",
-      "size": 36,
-      "link": "https://i.imgur.com/CzKW1QO.png"
-    },
-    {
       "date": "2019-04-08",
       "name": "TF Snow",
       "author": "Tetris Online, Inc.",
@@ -83,6 +62,13 @@
       "author": "Tetris Online, Inc.",
       "size": 36,
       "link": "https://i.imgur.com/NouUrs4.png"
+    },
+    {
+      "date": "2019-05-12",
+      "name": "TF Oldskool",
+      "author": "Tetris Online, Inc.",
+      "size": 36,
+      "link": "https://i.imgur.com/YVjnmR6.png"
     },
     {
       "date": "2019-04-15",
@@ -415,13 +401,6 @@
     },
     {
       "date": "2019-04-15",
-      "name": "TF Geo (Alt. version)",
-      "author": "Tetris Online, Inc.",
-      "size": 36,
-      "link": "https://i.imgur.com/hKDWylv.png"
-    },
-    {
-      "date": "2019-04-15",
       "name": "TF (Hidden Minos)",
       "author": "Tetris Online, Inc.",
       "size": 36,
@@ -491,18 +470,18 @@
       "link": "https://i.imgur.com/E3q5cxb.png"
     },
     {
-      "date": "2018-01-02",
-      "name": "TF Default (alt. version)",
-      "author": "MattMayuga",
-      "size": 32,
-      "link": "https://i.imgur.com/D0eEWo0.png"
-    },
-    {
       "date": "2019-05-12",
       "name": "TF Geo",
       "author": "Tetris Online, Inc.",
       "size": 36,
       "link": "https://i.imgur.com/IvdocbR.png"
+    },
+    {
+      "date": "2019-04-15",
+      "name": "TF Geo (Alt. version)",
+      "author": "Tetris Online, Inc.",
+      "size": 36,
+      "link": "https://i.imgur.com/hKDWylv.png"
     },
     {
       "date": "2019-05-12",
@@ -512,11 +491,25 @@
       "link": "https://i.imgur.com/nWOXtUf.png"
     },
     {
-      "date": "2019-05-12",
-      "name": "TF Chizel",
+      "date": "2019-11-20",
+      "name": "TF Rally 8P",
       "author": "Tetris Online, Inc.",
       "size": 36,
-      "link": "https://i.imgur.com/YVjnmR6.png"
+      "link": "https://i.imgur.com/CzKW1QO.png"
+    },
+    {
+      "date": "2019-11-18",
+      "name": "TF Burger King",
+      "author": "Tetris Online, Inc.",
+      "size": 36,
+      "link": "https://i.imgur.com/RpLfYyZ.png"
+    },
+    {
+      "date": "2019-11-18",
+      "name": "TF Foot Locker",
+      "author": "Tetris Online, Inc.",
+      "size": 36,
+      "link": "https://i.imgur.com/4Co9Ha0.png"
     },
     {
       "date": "2019-11-18",
@@ -524,6 +517,13 @@
       "author": "Tetris Online, Inc.",
       "size": 36,
       "link": "https://i.imgur.com/Qrc880r.png"
+    },
+    {
+      "date": "2018-01-02",
+      "name": "TF Default (alt. version)",
+      "author": "MattMayuga",
+      "size": 32,
+      "link": "https://i.imgur.com/D0eEWo0.png"
     }
   ],
   "Tetris 99": [
