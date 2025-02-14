@@ -1,6 +1,35 @@
 /** @typedef {{date: (string | ""), name: (string | ""), author: (string | ""), size: (number | ""), link: string, badges?: string[]}} Skin */
 /** @typedef {Object.<string, Skin[]>} Database */
 
+/** @type {HTMLImageElement} */
+const selectedSkinImg = document.getElementById("selected-skin");
+const urlCopy = {
+  /** @type {HTMLButtonElement} */
+  button: document.getElementById("copy-url"),
+  /** @type {SVGElement} */
+  svg: document
+    .getElementById("copy-url")
+    .getElementsByTagNameNS("http://www.w3.org/2000/svg", "svg")[0],
+  /** @type {HTMLSpanElement} */
+  span: document.getElementById("copy-url").getElementsByTagName("span")[0],
+  timeout: undefined,
+};
+const dataURLCopy = {
+  /** @type {HTMLButtonElement} */
+  button: document.getElementById("copy-data-url"),
+  /** @type {SVGElement} */
+  svg: document
+    .getElementById("copy-data-url")
+    .getElementsByTagNameNS("http://www.w3.org/2000/svg", "svg")[0],
+  /** @type {HTMLSpanElement} */
+  span: document
+    .getElementById("copy-data-url")
+    .getElementsByTagName("span")[0],
+  timeout: undefined,
+};
+/** @type {HTMLSpanElement} */
+const noSkinSelectedSpan = document.getElementById("no-skin-selected");
+
 class DatabaseManager {
   /** @type {Database} */
   database = {};
@@ -53,24 +82,33 @@ class DatabaseManager {
   /** @param {number} categoryIndex */
   switchCategory(categoryIndex) {
     if (this.lastSelectedCategory == categoryIndex) return;
-    if (this.lastSelectedCategory) this.lastSelectedCategory.classList.remove("selected");
+    if (this.lastSelectedCategory)
+      this.lastSelectedCategory.classList.remove("selected");
     this.categoryListItems[categoryIndex].classList.add("selected");
     this.lastSelectedCategory = this.categoryListItems[categoryIndex];
 
     if (categoryIndex === 0) {
-      if (this.searchResults.length === 0) document.getElementById("no-results").classList.remove("hidden");
+      if (this.searchResults.length === 0)
+        document.getElementById("no-results").classList.remove("hidden");
     } else document.getElementById("no-results").classList.add("hidden");
 
-    document.getElementById("skin-list-title").textContent = this.categories[categoryIndex];
+    document.getElementById("skin-list-title").textContent =
+      this.categories[categoryIndex];
 
-    let listToShow = categoryIndex === 0 ? this.searchResults : this.database[this.categories[categoryIndex]];
+    let listToShow =
+      categoryIndex === 0
+        ? this.searchResults
+        : this.database[this.categories[categoryIndex]];
     let listItems = [];
     listToShow.forEach((skin, index) => {
       let listItem = document.createElement("li");
       listItem.dataset.index = index;
       listItem.tabIndex = 0;
 
-      if (this.selectedSkin.category === categoryIndex && this.selectedSkin.index === index) {
+      if (
+        this.selectedSkin.category === categoryIndex &&
+        this.selectedSkin.index === index
+      ) {
         listItem.classList.add("selected");
       }
       listItem.onclick = (event) => {
@@ -82,12 +120,14 @@ class DatabaseManager {
           link: skin.link,
           connected: null,
         };
+        this.changeFooterSkin(skin.link);
         preview.changeSkin(skin.link, null);
         listItem.classList.add("selected");
-        if (this.lastSelectedSkin) this.lastSelectedSkin.classList.remove("selected");
+        if (this.lastSelectedSkin)
+          this.lastSelectedSkin.classList.remove("selected");
         this.lastSelectedSkin = listItem;
       };
-      // TODO: Make list items selectable
+
       let nameAndSkin = document.createElement("div");
       nameAndSkin.classList.add("name-and-skin");
       let moreInfo = document.createElement("div");
@@ -151,6 +191,60 @@ class DatabaseManager {
     document.getElementById("skin-list").replaceChildren(...listItems);
   }
 
+  changeFooterSkin(url) {
+    /**
+     * @param {MouseEvent} event
+     * @param {{button: HTMLButtonElement, svg: SVGElement, span: HTMLSpanElement}} button
+     * @param {string} text
+     *
+     */
+    const copyText = async (event, button, text) => {
+      if (button.button.classList.contains("confirm")) return;
+      try {
+        await navigator.clipboard.writeText(text);
+      } catch {
+        (error) =>
+          console.error("An error occured whilst copying skin link:\n" + error);
+      }
+      let originalText = button.span.textContent;
+      button.button.classList.add("confirm");
+      button.svg
+        .getElementsByTagName("use")[0]
+        .setAttribute("href", "./assets/symbols.svg#check");
+      button.span.textContent = "Copied!";
+      if (typeof button.timeout == "number") clearTimeout(button.timeout)
+      button.timeout = setTimeout(() => {
+        button.button.classList.remove("confirm");
+        button.svg
+          .getElementsByTagName("use")[0]
+          .setAttribute("href", "./assets/symbols.svg#link");
+        button.span.textContent = originalText;
+        button.timeout = undefined;
+      }, 5000);
+    };
+    selectedSkinImg.src = url;
+
+    noSkinSelectedSpan.classList.add("hidden");
+    urlCopy.button.disabled = false;
+    if (url.slice(-4) == ".gif") dataURLCopy.button.disabled = true;
+    else dataURLCopy.button.disabled = false;
+
+    if (!urlCopy.button.onclick) {
+      urlCopy.button.onclick = async (event) =>
+        await copyText(event, urlCopy, this.selectedSkin.link);
+    }
+    if (!dataURLCopy.button.onclick) {
+      dataURLCopy.button.onclick = async (event) => {
+        let canvas = document.createElement("canvas");
+        canvas.width = selectedSkinImg.naturalWidth;
+        canvas.height = selectedSkinImg.naturalHeight;
+        let ctx = canvas.getContext("2d");
+        ctx.drawImage(selectedSkinImg, 0, 0);
+        await copyText(event, dataURLCopy, canvas.toDataURL());
+      };
+    }
+  }
+
   /** @param {string} query  */
   // async, because search may take some time
   async search(query) {
@@ -159,7 +253,8 @@ class DatabaseManager {
     this.searchResults = [];
     let searchResults = [];
     let quoteCount = (query.match(/"/g) || []).length;
-    if (quoteCount % 2 == 1) throw new Error("The search query contains an unmatched quotation mark.");
+    if (quoteCount % 2 == 1)
+      throw new Error("The search query contains an unmatched quotation mark.");
     let splitterRegex = /[^ "]*"[^"]*"|[^ ]+/g;
     let splitQuery = [];
     let results;
@@ -187,10 +282,18 @@ class DatabaseManager {
 
     // case insensitive, user shouldn't be able to search by regex
     let termRegexes = terms.map(
-      (word) => new RegExp(`(?:^|\\W)${word.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, "\\$&")}(?:$|\\W)`, "i")
+      (word) =>
+        new RegExp(
+          `(?:^|\\W)${word.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, "\\$&")}(?:$|\\W)`,
+          "i",
+        ),
     );
     let authorRegexes = authors.map(
-      (word) => new RegExp(`(?:^|\\W)${word.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, "\\$&")}(?:$|\\W)`, "i")
+      (word) =>
+        new RegExp(
+          `(?:^|\\W)${word.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, "\\$&")}(?:$|\\W)`,
+          "i",
+        ),
     );
 
     this.searching = true;
@@ -219,7 +322,8 @@ class DatabaseManager {
         });
         let shouldResult = false;
         if (hasAuthors && hasTypes) {
-          if (authorScore > 0 && typeScore > 0) shouldResult = hasTerms ? termScore > 0 : true;
+          if (authorScore > 0 && typeScore > 0)
+            shouldResult = hasTerms ? termScore > 0 : true;
         } else {
           if (hasAuthors) {
             if (authorScore > 0) shouldResult = hasTerms ? termScore > 0 : true;
@@ -236,7 +340,10 @@ class DatabaseManager {
     });
 
     // Sort by score, then alphabetically by name
-    let collator = new Intl.Collator(undefined, { numeric: true, sensitivity: "base" });
+    let collator = new Intl.Collator(undefined, {
+      numeric: true,
+      sensitivity: "base",
+    });
     searchResults.sort((skin1, skin2) => {
       let [score1, score2] = [skin1.score, skin2.score];
       let [name1, name2] = [skin1.skin.name, skin2.skin.name];
@@ -250,7 +357,8 @@ class DatabaseManager {
       this.searchResults.push(result.skin);
     });
 
-    if (this.searchResults.length === 0) document.getElementById("no-results").classList.remove("hidden");
+    if (this.searchResults.length === 0)
+      document.getElementById("no-results").classList.remove("hidden");
     else document.getElementById("no-results").classList.add("hidden");
 
     this.searching = false;
@@ -411,7 +519,7 @@ class Preview {
       /* Dest. X       */ x * this.blockSize,
       /* Dest. Y       */ y * this.blockSize,
       /* Dest. width   */ this.blockSize,
-      /* Dest. height  */ this.blockSize
+      /* Dest. height  */ this.blockSize,
     );
   }
 
@@ -422,7 +530,12 @@ class Preview {
         if (block !== 0) {
           if (this.selectedSkin == null) {
             this.ctx.fillStyle = this.colors[block];
-            this.ctx.fillRect(x * this.blockSize, y * this.blockSize, this.blockSize, this.blockSize);
+            this.ctx.fillRect(
+              x * this.blockSize,
+              y * this.blockSize,
+              this.blockSize,
+              this.blockSize,
+            );
           } else {
             this.drawBlock(x, y, block);
           }
@@ -467,7 +580,10 @@ class Preview {
 let preview = new Preview();
 fetch("jstrisCustomizationDatabase.json", { cache: "reload" })
   .then((response) => {
-    if (!response.ok) throw new Error(`HTTP error whilst loading the database: ${response.status}`);
+    if (!response.ok)
+      throw new Error(
+        `HTTP error whilst loading the database: ${response.status}`,
+      );
     return response.json();
   })
   .then((json) => afterSuccessfulFetch(json))
@@ -537,7 +653,8 @@ class GIF {
   async loadURL(url) {
     await fetch(url)
       .then((response) => {
-        if (!response.ok) throw new Error(`HTTP error whilst loading GIF: ${response.status}`);
+        if (!response.ok)
+          throw new Error(`HTTP error whilst loading GIF: ${response.status}`);
         return response.arrayBuffer();
       })
       .then((arrayBuffer) => {
@@ -571,7 +688,10 @@ class GIF {
    * @param {(gifCanvas: OffscreenCanvas | HTMLCanvasElement) => void} callback Exposes the internal GIF canvas of the current GIF frame.
    * @param {number} timestamp Current timestamp.
    */
-  onEachFrame(callback = () => void 0, timestamp = document.timeline.currentTime) {
+  onEachFrame(
+    callback = () => void 0,
+    timestamp = document.timeline.currentTime,
+  ) {
     if (timestamp - this.t0 >= this.lastDelay) {
       // Time to draw the next frame!
       if (!this.reader) return;
@@ -601,13 +721,14 @@ class GIF {
               this.previousFrameInfo.x,
               this.previousFrameInfo.y,
               this.previousFrameInfo.width,
-              this.previousFrameInfo.height
+              this.previousFrameInfo.height,
             );
             break;
           case 3:
             // "Restore to previous" - revert back to most recent frame that was
             // not set to "Restore to previous", or frame 0
-            if (this.previousImageData) this.ctx.putImageData(previousImageData, 0, 0);
+            if (this.previousImageData)
+              this.ctx.putImageData(previousImageData, 0, 0);
             break;
           default:
             console.error("Disposal method is unsupported");
@@ -616,15 +737,33 @@ class GIF {
 
       if (this.frameNumber === 0 || frameInfo.disposal < 2) {
         // save this frame in case we need to revert to it later
-        this.previousImageData = this.ctx.getImageData(0, 0, this.reader.width, this.reader.height);
+        this.previousImageData = this.ctx.getImageData(
+          0,
+          0,
+          this.reader.width,
+          this.reader.height,
+        );
         this.previousImageData.frame = this.frameNumber;
       }
 
       // draw frame on top of existing canvas data
-      let imageData = this.ctx.getImageData(0, 0, this.reader.width, this.reader.height);
+      let imageData = this.ctx.getImageData(
+        0,
+        0,
+        this.reader.width,
+        this.reader.height,
+      );
 
       this.reader.decodeAndBlitFrameRGBA(this.frameNumber, imageData.data);
-      this.ctx.putImageData(imageData, 0, 0, frameInfo.x, frameInfo.y, frameInfo.width, frameInfo.height);
+      this.ctx.putImageData(
+        imageData,
+        0,
+        0,
+        frameInfo.x,
+        frameInfo.y,
+        frameInfo.width,
+        frameInfo.height,
+      );
 
       // get ready to draw next frame
       this.previousFrameInfo = frameInfo;
@@ -636,12 +775,16 @@ class GIF {
       else this.t0 = this.t0 + this.lastDelay;
       this.lastDelay = frameInfo.delay * 10;
 
-      this.animationHandle = requestAnimationFrame((t) => this.onEachFrame(callback, t));
+      this.animationHandle = requestAnimationFrame((t) =>
+        this.onEachFrame(callback, t),
+      );
 
       callback(this.canvas);
     } else {
       // Not drawing the next frame yet.
-      this.animationHandle = requestAnimationFrame((t) => this.onEachFrame(callback, t));
+      this.animationHandle = requestAnimationFrame((t) =>
+        this.onEachFrame(callback, t),
+      );
     }
   }
 

@@ -33,8 +33,8 @@
   --green-10: hsl(var(--green-h), var(--green-s), calc(var(--green-l) * 0.1));
 
   /* Cyan */
-  --cyan-h: 180;
-  --cyan-s: 100%;
+  --cyan-h: 242;
+  --cyan-s: 36%;
   --cyan-l: 27%;
 
   --cyan-100: hsl(var(--cyan-h), var(--cyan-s), var(--cyan-l));
@@ -47,6 +47,34 @@
   --cyan-30: hsl(var(--cyan-h), var(--cyan-s), calc(var(--cyan-l) * 0.3));
   --cyan-20: hsl(var(--cyan-h), var(--cyan-s), calc(var(--cyan-l) * 0.2));
   --cyan-10: hsl(var(--cyan-h), var(--cyan-s), calc(var(--cyan-l) * 0.1));
+
+  /* Gray */
+  --gray-h: 0;
+  --gray-s: 0%;
+  --gray-l: 20%;
+
+  --gray-100: hsl(var(--gray-h), var(--gray-s), var(--gray-l));
+  --gray-90:  hsl(var(--gray-h), var(--gray-s), calc(var(--gray-l) * 0.9));
+  --gray-80:  hsl(var(--gray-h), var(--gray-s), calc(var(--gray-l) * 0.8));
+  --gray-70:  hsl(var(--gray-h), var(--gray-s), calc(var(--gray-l) * 0.7));
+  --gray-60:  hsl(var(--gray-h), var(--gray-s), calc(var(--gray-l) * 0.6));
+  --gray-50:  hsl(var(--gray-h), var(--gray-s), calc(var(--gray-l) * 0.5));
+  --gray-40:  hsl(var(--gray-h), var(--gray-s), calc(var(--gray-l) * 0.4));
+  --gray-30:  hsl(var(--gray-h), var(--gray-s), calc(var(--gray-l) * 0.3));
+  --gray-20:  hsl(var(--gray-h), var(--gray-s), calc(var(--gray-l) * 0.2));
+  --gray-10:  hsl(var(--gray-h), var(--gray-s), calc(var(--gray-l) * 0.1));
+
+  /* No skin placeholder */
+  --odd-color: #111;
+  --even-color: #222;
+  --skin-size: 24px;
+  --no-skin-placeholder: repeating-linear-gradient(
+    90deg,
+    var(--odd-color),
+    var(--odd-color) var(--skin-size),
+    var(--even-color) var(--skin-size),
+    var(--even-color) calc(var(--skin-size) * 2)
+  );
 }
 
 * {
@@ -70,54 +98,85 @@
 
 button {
   font-size: 16px;
-  padding: 10px 15px;
+  padding: 5px;
   background-color: var(--cyan-100);
   border: 2px solid var(--cyan-80);
   border-radius: 5px;
+
+  display: inline flex;
+  flex-direction: row;
+  gap: 5px;
+  align-items: center;
 }
 
-button:hover {
+button svg {
+  width: 1em;
+  height: 1em;
+}
+
+button svg * {
+  stroke: currentColor;
+  fill: currentColor;
+}
+
+button span {
+  width: 100%;
+}
+
+button:hover:enabled {
   background-color: var(--cyan-80);
   border: 2px solid var(--cyan-60);
 
   cursor: pointer;
 }
 
-button:active {
+button:active:enabled {
   background-color: var(--cyan-60);
   border: 2px solid var(--cyan-40);
 }
 
-button.confirm {
+button.confirm:enabled {
   background-color: var(--green-100);
   border: 2px solid var(--green-80);
   border-radius: 5px;
 }
 
-button.confirm:hover {
+button.confirm:hover:enabled {
   background-color: var(--green-80);
   border: 2px solid var(--green-60);
 }
 
-button.confirm:active {
+button.confirm:active:enabled {
   background-color: var(--green-60);
   border: 2px solid var(--green-40);
 }
 
-button.cancel {
+button.cancel:enabled {
   background-color: var(--red-100);
   border: 2px solid var(--red-80);
   border-radius: 5px;
 }
 
-button.cancel:hover {
+button.cancel:hover:enabled {
   background-color: var(--red-80);
   border: 2px solid var(--red-60);
 }
 
-button.cancel:active {
+button.cancel:active:enabled {
   background-color: var(--red-60);
   border: 2px solid var(--red-40);
+}
+
+button:disabled {
+  background-color: var(--gray-100);
+  border: 2px solid var(--gray-80);
+  cursor: not-allowed;
+}
+
+button:disabled * {
+  color: hsl(0, 0%, 60%);
+  fill: hsl(0, 0%, 60%);
+  stroke: hsl(0, 0%, 60%);
 }
 
 menu {
@@ -249,7 +308,7 @@ header form #search-tooltip {
 }
 
 #search-tooltip .description {
-  color: hsl(0, 0%, 60%)
+  color: hsl(0, 0%, 60%);
 }
 
 header form #search-tooltip .arrow {
@@ -519,7 +578,44 @@ footer {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: end;
+  justify-content: start;
   gap: 10px;
   padding: 0 10px;
+}
+
+footer .flex-spacer {
+  margin-left: auto;
+  flex: 1 1 auto;
+}
+
+footer button {
+  width: 170px;
+  height: 40px;
+}
+
+#selected-skin-container {
+  height: 24px;
+  width: 216px;
+  flex: 0 0 auto;
+  background: var(--no-skin-placeholder);
+
+  align-items: center;
+  justify-items: center;
+}
+
+#selected-skin-container .message {
+  background-color: #0008;
+  border-radius: 5px;
+  width: fit-content;
+  height: fit-content;
+  padding: 2px;
+}
+
+#selected-skin {
+  height: 24px;
+  width: 216px;
+}
+
+#selected-skin:not([src]) {
+  display: none;
 }

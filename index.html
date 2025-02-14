@@ -84,9 +84,24 @@
       </div>
     </main>
     <footer>
-      <button>Button</button>
-      <button class="confirm">Confirm</button>
-      <button class="cancel">Cancel</button>
+      <span>Selected skin:</span>
+      <div id="selected-skin-container" class="stack">
+        <img id="selected-skin" crossorigin="anonymous" />
+        <span id="no-skin-selected" class="message">No skin selected.</span>
+      </div>
+      <div class="flex-spacer"></div>
+      <button id="copy-url" disabled>
+        <svg xmlns="http://www.w3.org/2000/svg">
+          <use href="./assets/symbols.svg#link"/>
+        </svg>
+        <span>Copy link</span>
+      </button>
+      <button id="copy-data-url" disabled>
+        <svg xmlns="http://www.w3.org/2000/svg">
+          <use href="./assets/symbols.svg#link"/>
+        </svg>
+        <span>Copy as data URL</span>
+      </button>
     </footer>
     <script src="js/omggif.js"></script>
     <script src="js/script.js"></script>
