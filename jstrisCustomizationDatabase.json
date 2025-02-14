@@ -969,10 +969,24 @@
     },
     {
       "date": "2019-04-15",
+      "name": "TB Aloha",
+      "author": "Tetris Online, Inc.",
+      "size": 36,
+      "link": "https://i.imgur.com/KwNNkWn.png"
+    },
+    {
+      "date": "2019-04-15",
       "name": "TB Amore",
       "author": "Tetris Online, Inc.",
       "size": 36,
       "link": "https://i.imgur.com/814QmwR.png"
+    },
+    {
+      "date": "2019-04-15",
+      "name": "TB Checkmate",
+      "author": "Tetris Online, Inc.",
+      "size": 36,
+      "link": "https://i.imgur.com/wQ4nhxg.png"
     },
     {
       "date": "2019-04-15",
@@ -1001,6 +1015,20 @@
       "author": "Tetris Online, Inc.",
       "size": 36,
       "link": "https://i.imgur.com/rF2ZkuX.png"
+    },
+    {
+      "date": "2019-05-30",
+      "name": "TB Fruit",
+      "author": "Oki",
+      "size": 36,
+      "link": "https://i.imgur.com/9YTMglA.png"
+    },
+    {
+      "date": "2019-05-30",
+      "name": "TB Gmaster",
+      "author": "Oki",
+      "size": 36,
+      "link": "https://i.imgur.com/4qibOwB.png"
     },
     {
       "date": "2019-04-15",
@@ -1080,104 +1108,6 @@
       "link": "https://i.imgur.com/IKGZHjp.png"
     },
     {
-      "date": "2019-04-15",
-      "name": "TB Checkmate",
-      "author": "Tetris Online, Inc.",
-      "size": 36,
-      "link": "https://i.imgur.com/wQ4nhxg.png"
-    },
-    {
-      "date": "2019-04-15",
-      "name": "TB Aloha",
-      "author": "Tetris Online, Inc.",
-      "size": 36,
-      "link": "https://i.imgur.com/KwNNkWn.png"
-    },
-    {
-      "date": "2018-01-02",
-      "name": "TB Logo",
-      "author": "MattMayuga",
-      "size": 32,
-      "link": "https://i.imgur.com/h27zv7r.png"
-    },
-    {
-      "date": "2020-02-04",
-      "name": "TB Luv",
-      "author": "Tetris Online, Inc.",
-      "size": 36,
-      "link": "https://i.imgur.com/ilwdELw.png"
-    },
-    {
-      "date": "2020-02-04",
-      "name": "TB Sushi",
-      "author": "Tetris Online, Inc.",
-      "size": 36,
-      "link": "https://i.imgur.com/wGwLuON.png"
-    },
-    {
-      "date": "2019-05-30",
-      "name": "TB Fruit",
-      "author": "Oki",
-      "size": 36,
-      "link": "https://i.imgur.com/9YTMglA.png"
-    },
-    {
-      "date": "2019-05-30",
-      "name": "TB Gmaster",
-      "author": "Oki",
-      "size": 36,
-      "link": "https://i.imgur.com/4qibOwB.png"
-    },
-    {
-      "date": "2019-06-03",
-      "name": "TB Louvre",
-      "author": "Tetris Online, Inc.",
-      "size": 36,
-      "link": "https://i.imgur.com/atHdnza.png"
-    },
-    {
-      "date": "2019-01-17",
-      "name": "TB Donut ",
-      "author": "Tetris Online, Inc.",
-      "size": 36,
-      "link": "https://i.imgur.com/w92PXj1.png"
-    },
-    {
-      "date": "2020-01-22",
-      "name": "TB Horizon",
-      "author": "Tetris Online, Inc.",
-      "size": 36,
-      "link": "https://i.imgur.com/K2NwKvW.png"
-    },
-    {
-      "date": "2020-01-26",
-      "name": "TB Pizzaz",
-      "author": "Tetris Online, Inc.",
-      "size": 36,
-      "link": "https://i.imgur.com/3KJ6R2X.png"
-    },
-    {
-      "date": "2020-01-16",
-      "name": "TB Charms",
-      "author": "Tetris Online, Inc.",
-      "size": 36,
-      "link": "https://i.imgur.com/Q994s1P.png"
-    },
-    {
-      "date": "2020-01-17",
-      "name": "TB Navydenim",
-      "author": "Tetris Online, Inc.",
-      "size": 36,
-      "link": "https://i.imgur.com/dbLwbsL.png"
-    },
-    {
-      "date": "2020-01-16",
-      "name": "TB Jelly",
-      "author": "Tetris Online, Inc.",
-      "size": 36,
-      "link": "https://i.imgur.com/WxSjhEq.png"
-    },
-    {
       "date": "2020-01-16",
       "name": "TB Candy",
       "author": "Tetris Online, Inc.",
@@ -1199,6 +1129,27 @@
       "link": "https://i.imgur.com/pFfK81S.png"
     },
     {
+      "date": "2020-01-16",
+      "name": "TB Charms",
+      "author": "Tetris Online, Inc.",
+      "size": 36,
+      "link": "https://i.imgur.com/Q994s1P.png"
+    },
+    {
+      "date": "2019-01-17",
+      "name": "TB Donut ",
+      "author": "Tetris Online, Inc.",
+      "size": 36,
+      "link": "https://i.imgur.com/w92PXj1.png"
+    },
+    {
+      "date": "2020-01-22",
+      "name": "TB Horizon",
+      "author": "Tetris Online, Inc.",
+      "size": 36,
+      "link": "https://i.imgur.com/K2NwKvW.png"
+    },
+    {
       "date": "2020-01-17",
       "name": "TB Jade",
       "author": "Tetris Online, Inc.",
@@ -1206,11 +1157,60 @@
       "link": "https://i.imgur.com/026P9k4.png"
     },
     {
+      "date": "2020-01-16",
+      "name": "TB Jelly",
+      "author": "Tetris Online, Inc.",
+      "size": 36,
+      "link": "https://i.imgur.com/WxSjhEq.png"
+    },
+    {
+      "date": "2019-06-03",
+      "name": "TB Louvre",
+      "author": "Tetris Online, Inc.",
+      "size": 36,
+      "link": "https://i.imgur.com/atHdnza.png"
+    },
+    {
+      "date": "2020-02-04",
+      "name": "TB Luv",
+      "author": "Tetris Online, Inc.",
+      "size": 36,
+      "link": "https://i.imgur.com/ilwdELw.png"
+    },
+    {
+      "date": "2020-01-17",
+      "name": "TB Navydenim",
+      "author": "Tetris Online, Inc.",
+      "size": 36,
+      "link": "https://i.imgur.com/dbLwbsL.png"
+    },
+    {
       "date": "2020-01-17",
       "name": "TB Net",
       "author": "Tetris Online, Inc.",
       "size": 36,
       "link": "https://i.imgur.com/LDVn6Uu.png"
+    },
+    {
+      "date": "2020-01-26",
+      "name": "TB Pizzaz",
+      "author": "Tetris Online, Inc.",
+      "size": 36,
+      "link": "https://i.imgur.com/3KJ6R2X.png"
+    },
+    {
+      "date": "2020-02-04",
+      "name": "TB Sushi",
+      "author": "Tetris Online, Inc.",
+      "size": 36,
+      "link": "https://i.imgur.com/wGwLuON.png"
+    },
+    {
+      "date": "2018-01-02",
+      "name": "TB Logo",
+      "author": "MattMayuga",
+      "size": 32,
+      "link": "https://i.imgur.com/h27zv7r.png"
     }
   ],
   "Tetris Online Japan/Poland": [
