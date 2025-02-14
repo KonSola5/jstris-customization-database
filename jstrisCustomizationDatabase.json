@@ -2917,13 +2917,6 @@
   ],
   "Tetris.com": [
     {
-      "date": "2019-06-04",
-      "name": "Hello Kitty Tetris (2019)",
-      "author": "Oki",
-      "size": 58,
-      "link": "https://i.imgur.com/m9m6rn2.png"
-    },
-    {
       "date": "2019-06-05",
       "name": "Tetris at tetris.com (Locked)",
       "author": "MagnumAlpasan",
@@ -2936,6 +2929,20 @@
       "author": "MagnumAlpasan",
       "size": 50,
       "link": "https://i.imgur.com/LSd0r7K.png"
+    },
+    {
+      "date": "2019-06-04",
+      "name": "Hello Kitty Tetris (2019)",
+      "author": "Oki",
+      "size": 58,
+      "link": "https://i.imgur.com/m9m6rn2.png"
+    },
+    {
+      "date": "2020-03-14",
+      "name": "Hello Kitty Tetris (2019 November Update)",
+      "author": "Sanrio, Tetris Holding",
+      "size": 58,
+      "link": "https://i.imgur.com/vhnznDY.png"
     }
   ],
   "Tetris Effect Connected": [
@@ -6794,6 +6801,27 @@
       "author": "Hudson Soft, Bandai",
       "size": 40,
       "link": "https://i.imgur.com/BbxgVRT.png"
+    },
+    {
+      "date": "2019-11-12",
+      "name": "Tetris (for Roku)",
+      "author": "Tetris Online, Inc.",
+      "size": 54,
+      "link": "https://i.imgur.com/f053HnX.png"
+    },
+    {
+      "date": "2019-11-13",
+      "name": "Tetris® M1ND BEND3R",
+      "author": "Red Bull Mind Gamers",
+      "size": 52,
+      "link": "https://i.imgur.com/bxzTiml.png"
+    },
+    {
+      "date": "2024-11-26",
+      "name": "Tetris Forever (2024)",
+      "author": "Digital Eclipse",
+      "size": 32,
+      "link": "https://i.imgur.com/7UZoQRi.png"
     }
   ],
   "Other Tetris ports": [
@@ -7621,13 +7649,6 @@
     },
     {
       "date": "2019-11-12",
-      "name": "Tetris (for Roku)",
-      "author": "Tetris Online, Inc.",
-      "size": 54,
-      "link": "https://i.imgur.com/f053HnX.png"
-    },
-    {
-      "date": "2019-11-12",
       "name": "Kevtris (2003) Pocket PC",
       "author": "Kevin Hsu",
       "size": 48,
@@ -7660,13 +7681,6 @@
       "author": "",
       "size": 32,
       "link": "https://i.imgur.com/LyXBr3g.png"
-    },
-    {
-      "date": "2019-11-13",
-      "name": "Tetris® M1ND BEND3R",
-      "author": "Red Bull Mind Gamers",
-      "size": 52,
-      "link": "https://i.imgur.com/bxzTiml.png"
     },
     {
       "date": "2019-11-22",
@@ -8626,13 +8640,6 @@
       "author": "Taninkona",
       "size": 48,
       "link": "https://i.imgur.com/XomlJfo.png"
-    },
-    {
-      "date": "2020-03-14",
-      "name": "Hello Kitty Tetris (2019 November Update)",
-      "author": "Sanrio, Tetris Holding",
-      "size": 58,
-      "link": "https://i.imgur.com/vhnznDY.png"
     },
     {
       "date": "2020-03-16",
@@ -11132,13 +11139,6 @@
       "author": "Szymon Ulatowski",
       "size": 32,
       "link": "https://i.imgur.com/mNjtHUD.png"
-    },
-    {
-      "date": "2024-11-26",
-      "name": "Tetris Forever (2024)",
-      "author": "Digital Eclipse",
-      "size": 32,
-      "link": "https://i.imgur.com/7UZoQRi.png"
     }
   ],
   "Wikis": [
