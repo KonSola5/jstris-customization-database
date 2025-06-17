@@ -4634,96 +4634,6 @@
       "link": "https://i.imgur.com/GVbSzaV.png"
     }
   ],
-  "Tetroid": [
-    {
-      "date": "2019-05-19",
-      "name": "Tetroid (c. 2015)",
-      "author": "",
-      "size": 32,
-      "link": "https://i.imgur.com/rQPYZHk.png"
-    },
-    {
-      "date": "2019-05-19",
-      "name": "Mathpup Tetroid (c. 2015)",
-      "author": "",
-      "size": 50,
-      "link": "https://i.imgur.com/2y8JIMC.png"
-    }
-  ],
-  "STOWizm": [
-    {
-      "date": "2019-05-20",
-      "name": "STOWizm (2015) Block Type 0 ",
-      "author": "ekukodin",
-      "size": 64,
-      "link": "https://i.imgur.com/Kj6ZHZr.png"
-    },
-    {
-      "date": "2019-05-20",
-      "name": "STOWizm (2015) Block Type 1",
-      "author": "ekukodin",
-      "size": 64,
-      "link": "https://i.imgur.com/Pr7qo5y.png"
-    },
-    {
-      "date": "2019-05-20",
-      "name": "STOWizm (2015) Block Type 2",
-      "author": "ekukodin",
-      "size": 64,
-      "link": "https://i.imgur.com/5SapvY6.png"
-    },
-    {
-      "date": "2019-05-20",
-      "name": "STOWizm (2015) Block Type 3",
-      "author": "ekukodin",
-      "size": 64,
-      "link": "https://i.imgur.com/4AuyFXx.png"
-    }
-  ],
-  "TETURSS": [
-    {
-      "date": "2019-05-20",
-      "name": "TETURSS (2017) Classic Communism ",
-      "author": "Abject",
-      "size": 32,
-      "link": "https://i.imgur.com/Qc37dEM.png"
-    },
-    {
-      "date": "2019-05-20",
-      "name": "TETURSS (2017) Dark Communism ",
-      "author": "Abject",
-      "size": 32,
-      "link": "https://i.imgur.com/AtLI1pD.png"
-    },
-    {
-      "date": "2019-05-20",
-      "name": "TETURSS (2017) Smooth Vodka",
-      "author": "Abject",
-      "size": 32,
-      "link": "https://i.imgur.com/oc8mc6g.png"
-    },
-    {
-      "date": "2019-05-20",
-      "name": "TETURSS (2017) Trump's Wall",
-      "author": "Abject",
-      "size": 32,
-      "link": "https://i.imgur.com/Cy2EIMK.png"
-    },
-    {
-      "date": "2019-05-20",
-      "name": "TETURSS (2017) Mein Kampf",
-      "author": "Abject",
-      "size": 32,
-      "link": "https://i.imgur.com/4mJposB.png"
-    },
-    {
-      "date": "2019-05-20",
-      "name": "TETURSS (2017) Soviet Nostalgia",
-      "author": "Abject",
-      "size": 32,
-      "link": "https://i.imgur.com/TMhQSG3.png"
-    }
-  ],
   "Blockdrop": [
     {
       "date": "2020-02-28",
@@ -7228,6 +7138,90 @@
       "author": "Leigh Pauls",
       "size": 32,
       "link": "https://i.imgur.com/XhTuPyh.png"
+    },
+    {
+      "date": "2019-05-19",
+      "name": "Tetroid (c. 2015)",
+      "author": "",
+      "size": 32,
+      "link": "https://i.imgur.com/rQPYZHk.png"
+    },
+    {
+      "date": "2019-05-19",
+      "name": "Mathpup Tetroid (c. 2015)",
+      "author": "",
+      "size": 50,
+      "link": "https://i.imgur.com/2y8JIMC.png"
+    },
+    {
+      "date": "2019-05-20",
+      "name": "STOWizm (2015) Block Type 0 ",
+      "author": "ekukodin",
+      "size": 64,
+      "link": "https://i.imgur.com/Kj6ZHZr.png"
+    },
+    {
+      "date": "2019-05-20",
+      "name": "STOWizm (2015) Block Type 1",
+      "author": "ekukodin",
+      "size": 64,
+      "link": "https://i.imgur.com/Pr7qo5y.png"
+    },
+    {
+      "date": "2019-05-20",
+      "name": "STOWizm (2015) Block Type 2",
+      "author": "ekukodin",
+      "size": 64,
+      "link": "https://i.imgur.com/5SapvY6.png"
+    },
+    {
+      "date": "2019-05-20",
+      "name": "STOWizm (2015) Block Type 3",
+      "author": "ekukodin",
+      "size": 64,
+      "link": "https://i.imgur.com/4AuyFXx.png"
+    },
+    {
+      "date": "2019-05-20",
+      "name": "TETURSS (2017) Classic Communism ",
+      "author": "Abject",
+      "size": 32,
+      "link": "https://i.imgur.com/Qc37dEM.png"
+    },
+    {
+      "date": "2019-05-20",
+      "name": "TETURSS (2017) Dark Communism ",
+      "author": "Abject",
+      "size": 32,
+      "link": "https://i.imgur.com/AtLI1pD.png"
+    },
+    {
+      "date": "2019-05-20",
+      "name": "TETURSS (2017) Smooth Vodka",
+      "author": "Abject",
+      "size": 32,
+      "link": "https://i.imgur.com/oc8mc6g.png"
+    },
+    {
+      "date": "2019-05-20",
+      "name": "TETURSS (2017) Trump's Wall",
+      "author": "Abject",
+      "size": 32,
+      "link": "https://i.imgur.com/Cy2EIMK.png"
+    },
+    {
+      "date": "2019-05-20",
+      "name": "TETURSS (2017) Mein Kampf",
+      "author": "Abject",
+      "size": 32,
+      "link": "https://i.imgur.com/4mJposB.png"
+    },
+    {
+      "date": "2019-05-20",
+      "name": "TETURSS (2017) Soviet Nostalgia",
+      "author": "Abject",
+      "size": 32,
+      "link": "https://i.imgur.com/TMhQSG3.png"
     },
     {
       "date": "2020-07-25",
