@@ -4983,22 +4983,6 @@
       "link": "https://i.imgur.com/IDTmav2.png"
     }
   ],
-  "Jumble Blocks": [
-    {
-      "date": "2019-05-31",
-      "name": "Jumble Blocks (2016)",
-      "author": "Jayenkai",
-      "size": 64,
-      "link": "https://i.imgur.com/HZtl8fQ.png"
-    },
-    {
-      "date": "2019-05-31",
-      "name": "Jumble Blocks (2016) Flowers",
-      "author": "Jayenkai",
-      "size": 64,
-      "link": "https://i.imgur.com/3zfnRfg.png"
-    }
-  ],
   "Tetris Journey (俄罗斯方块环游记)": [
     {
       "date": "2019-11-19",
@@ -6985,7 +6969,7 @@
       "link": "https://i.imgur.com/zrlg9NA.png"
     }
   ],
-  "Other Tetris-like games and hacks": [
+  "Other Tetris clones": [
     {
       "date": "2019-04-14",
       "name": "LJ65 (2002, NES Homebrew)",
@@ -7448,6 +7432,20 @@
       "author": "AvalonIndustries",
       "size": 36,
       "link": "https://i.imgur.com/1Q8FH2n.png"
+    },
+    {
+      "date": "2019-05-31",
+      "name": "Jumble Blocks (2016)",
+      "author": "Jayenkai",
+      "size": 64,
+      "link": "https://i.imgur.com/HZtl8fQ.png"
+    },
+    {
+      "date": "2019-05-31",
+      "name": "Jumble Blocks (2016) Flowers",
+      "author": "Jayenkai",
+      "size": 64,
+      "link": "https://i.imgur.com/3zfnRfg.png"
     },
     {
       "date": "2019-05-31",
