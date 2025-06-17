@@ -2282,77 +2282,6 @@
       "link": "https://i.imgur.com/FYPBIOZ.png"
     }
   ],
-  "Tetris (Game Boy)": [
-    {
-      "date": "2019-07-13",
-      "name": "GameBoy Tetris Skin",
-      "author": "Rich ¥Weeds¥ Nagel",
-      "size": 48,
-      "link": "https://i.imgur.com/4LDPaBx.png"
-    }
-  ],
-  "Tetris DX (Game Boy Color)": [
-    {
-      "date": "2019-07-13",
-      "name": "Gameboy Tetris DX Skin",
-      "author": "Rich ¥Weeds¥ Nagel",
-      "size": 48,
-      "link": "https://i.imgur.com/SaaIUFa.png"
-    }
-  ],
-  "Pokémon Tetris": [
-    {
-      "date": "2019-04-14",
-      "name": "Pokémon Tetris (Pokemon mini)",
-      "author": "Superjustinbros",
-      "size": 32,
-      "link": "https://i.imgur.com/sh56ICY.png"
-    }
-  ],
-  "Tetris II: Special Edition (MSX)": [
-    {
-      "date": "2020-07-30",
-      "name": "Tetris II: Special Edition (MSX, 1996) Bloody",
-      "author": "R.A.M.",
-      "size": 32,
-      "link": "https://i.imgur.com/QwxViAm.png"
-    },
-    {
-      "date": "2020-07-30",
-      "name": "Tetris II: Special Edition (MSX, 1996) Wizlow",
-      "author": "R.A.M.",
-      "size": 32,
-      "link": "https://i.imgur.com/TYPsB67.png"
-    },
-    {
-      "date": "2020-07-30",
-      "name": "Tetris II: Special Edition (MSX, 1996) The Kozz",
-      "author": "R.A.M.",
-      "size": 32,
-      "link": "https://i.imgur.com/hx8wyAC.png"
-    },
-    {
-      "date": "2020-07-30",
-      "name": "Tetris II: Special Edition (MSX, 1996) Brutus",
-      "author": "R.A.M.",
-      "size": 32,
-      "link": "https://i.imgur.com/eaegP0f.png"
-    },
-    {
-      "date": "2020-07-30",
-      "name": "Tetris II: Special Edition (MSX, 1996) Inlander",
-      "author": "R.A.M.",
-      "size": 32,
-      "link": "https://i.imgur.com/WFbWhTj.png"
-    },
-    {
-      "date": "2020-07-30",
-      "name": "Tetris II: Special Edition (MSX, 1996) Skincrest",
-      "author": "R.A.M.",
-      "size": 32,
-      "link": "https://i.imgur.com/jZlTBQo.png"
-    }
-  ],
   "Tetris (NES)": [
     {
       "date": "2019-04-05",
@@ -2453,6 +2382,77 @@
       "link": "https://i.imgur.com/VheVChK.png"
     }
   ],
+  "Tetris (Game Boy)": [
+    {
+      "date": "2019-07-13",
+      "name": "GameBoy Tetris Skin",
+      "author": "Rich ¥Weeds¥ Nagel",
+      "size": 48,
+      "link": "https://i.imgur.com/4LDPaBx.png"
+    }
+  ],
+  "Tetris DX (Game Boy Color)": [
+    {
+      "date": "2019-07-13",
+      "name": "Gameboy Tetris DX Skin",
+      "author": "Rich ¥Weeds¥ Nagel",
+      "size": 48,
+      "link": "https://i.imgur.com/SaaIUFa.png"
+    }
+  ],
+  "Pokémon Tetris": [
+    {
+      "date": "2019-04-14",
+      "name": "Pokémon Tetris (Pokemon mini)",
+      "author": "Superjustinbros",
+      "size": 32,
+      "link": "https://i.imgur.com/sh56ICY.png"
+    }
+  ],
+  "Tetris II: Special Edition (MSX)": [
+    {
+      "date": "2020-07-30",
+      "name": "Tetris II: Special Edition (MSX, 1996) Bloody",
+      "author": "R.A.M.",
+      "size": 32,
+      "link": "https://i.imgur.com/QwxViAm.png"
+    },
+    {
+      "date": "2020-07-30",
+      "name": "Tetris II: Special Edition (MSX, 1996) Wizlow",
+      "author": "R.A.M.",
+      "size": 32,
+      "link": "https://i.imgur.com/TYPsB67.png"
+    },
+    {
+      "date": "2020-07-30",
+      "name": "Tetris II: Special Edition (MSX, 1996) The Kozz",
+      "author": "R.A.M.",
+      "size": 32,
+      "link": "https://i.imgur.com/hx8wyAC.png"
+    },
+    {
+      "date": "2020-07-30",
+      "name": "Tetris II: Special Edition (MSX, 1996) Brutus",
+      "author": "R.A.M.",
+      "size": 32,
+      "link": "https://i.imgur.com/eaegP0f.png"
+    },
+    {
+      "date": "2020-07-30",
+      "name": "Tetris II: Special Edition (MSX, 1996) Inlander",
+      "author": "R.A.M.",
+      "size": 32,
+      "link": "https://i.imgur.com/WFbWhTj.png"
+    },
+    {
+      "date": "2020-07-30",
+      "name": "Tetris II: Special Edition (MSX, 1996) Skincrest",
+      "author": "R.A.M.",
+      "size": 32,
+      "link": "https://i.imgur.com/jZlTBQo.png"
+    }
+  ],
   "Tetris & Dr. Mario": [
     {
       "date": "2019-04-14",
@@ -2479,7 +2479,7 @@
   "Tetris Plus": [
      {
       "date": "2020-04-19",
-      "name": "Tetris Plus (1996)",
+      "name": "Tetris Plus (1996, Arcade)",
       "author": "Jaleco",
       "size": 32,
       "link": "https://i.imgur.com/AStk6Rl.png"
@@ -2784,15 +2784,6 @@
   ],
   "Tetris The Grand Master": [],
   "Tetris The Grand Master 2": [],
-  "Tetris with Cardcaptor Sakura": [
-    {
-      "date": "2020-06-05",
-      "name": "Tetris with Cardcaptor Sakura Eternal Heart",
-      "author": "Arika",
-      "size": 32,
-      "link": "https://i.imgur.com/iYn66Z9.png"
-    }
-  ],
   "Tetris The Grand Master 3": [
     {
       "date": "2019-05-16",
@@ -2819,6 +2810,15 @@
     }
   ],
   "Tetris The Grand Master 4": [],
+  "Tetris with Cardcaptor Sakura": [
+    {
+      "date": "2020-06-05",
+      "name": "Tetris with Cardcaptor Sakura Eternal Heart (2000, PS1)",
+      "author": "Arika",
+      "size": 32,
+      "link": "https://i.imgur.com/iYn66Z9.png"
+    }
+  ],
   "Tetris (G-Mode, J2ME)": [
     {
       "date": "2019-04-14",
