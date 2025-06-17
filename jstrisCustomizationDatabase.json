@@ -5382,141 +5382,6 @@
       "link": "https://i.imgur.com/V9YKLrh.png"
     }
   ],
-  "Pico Tetris": [
-    {
-      "date": "2019-05-28",
-      "name": "Pico Tetris v0.9 Tetromino Sprite 0",
-      "author": "Vanessa",
-      "size": 48,
-      "link": "https://i.imgur.com/bjz02RN.png"
-    },
-    {
-      "date": "2019-05-28",
-      "name": "Pico Tetris v0.9 Tetromino Sprite 1",
-      "author": "Vanessa",
-      "size": 48,
-      "link": "https://i.imgur.com/d1OirHc.png"
-    },
-    {
-      "date": "2019-05-28",
-      "name": "Pico Tetris v0.9 Tetromino Sprite 2",
-      "author": "Vanessa",
-      "size": 48,
-      "link": "https://i.imgur.com/0OgeZQv.png"
-    },
-    {
-      "date": "2019-05-28",
-      "name": "Pico Tetris v1.0 Tetromino Sprite 0",
-      "author": "Vanessa",
-      "size": 48,
-      "link": "https://i.imgur.com/8AK4Eip.png"
-    },
-    {
-      "date": "2019-05-28",
-      "name": "Pico Tetris v1.0 Tetromino Sprite 1",
-      "author": "Vanessa",
-      "size": 48,
-      "link": "https://i.imgur.com/c8nYn1p.png"
-    },
-    {
-      "date": "2019-05-28",
-      "name": "Pico Tetris v1.0 Tetromino Sprite 2",
-      "author": "Vanessa",
-      "size": 48,
-      "link": "https://i.imgur.com/mJ4D8Ok.png"
-    },
-    {
-      "date": "2019-05-28",
-      "name": "Pico Tetris v1.0 Tetromino Sprite 3",
-      "author": "Vanessa",
-      "size": 48,
-      "link": "https://i.imgur.com/xNIS5d0.png"
-    },
-    {
-      "date": "2019-05-28",
-      "name": "Pico Tetris v1.0 Tetromino Sprite 4",
-      "author": "Vanessa",
-      "size": 48,
-      "link": "https://i.imgur.com/XQsVdM2.png"
-    },
-    {
-      "date": "2019-05-28",
-      "name": "Pico Tetris v1.0 Tetromino Sprite 5",
-      "author": "Vanessa",
-      "size": 48,
-      "link": "https://i.imgur.com/bC0IlJG.png"
-    },
-    {
-      "date": "2019-05-28",
-      "name": "Pico Tetris v1.0 Tetromino Sprite 6",
-      "author": "Vanessa",
-      "size": 48,
-      "link": "https://i.imgur.com/DqbqivG.png"
-    },
-    {
-      "date": "2019-05-28",
-      "name": "Pico Tetris v1.0 Tetromino Sprite 7",
-      "author": "Vanessa",
-      "size": 48,
-      "link": "https://i.imgur.com/FDd7Bpk.png"
-    },
-    {
-      "date": "2019-05-28",
-      "name": "Pico Tetris v1.0 Tetromino Sprite 8",
-      "author": "Vanessa",
-      "size": 48,
-      "link": "https://i.imgur.com/clVOvJ5.png"
-    },
-    {
-      "date": "2019-05-28",
-      "name": "Pico Tetris v1.0 Tetromino Sprite 9",
-      "author": "Vanessa",
-      "size": 48,
-      "link": "https://i.imgur.com/ktRDq0N.png"
-    },
-    {
-      "date": "2019-05-28",
-      "name": "Pico Tetris v1.0 Tetromino Sprite 10",
-      "author": "Vanessa",
-      "size": 48,
-      "link": "https://i.imgur.com/ps4qzWx.png"
-    },
-    {
-      "date": "2019-05-28",
-      "name": "Pico Tetris v1.0 Tetromino Sprite 11",
-      "author": "Vanessa",
-      "size": 48,
-      "link": "https://i.imgur.com/KbSzXt8.png"
-    },
-    {
-      "date": "2019-05-28",
-      "name": "Pico Tetris v1.0 Tetromino Sprite 12",
-      "author": "Vanessa",
-      "size": 48,
-      "link": "https://i.imgur.com/R5R4H7V.png"
-    },
-    {
-      "date": "2019-05-28",
-      "name": "Pico Tetris v1.0 Tetromino Sprite 13",
-      "author": "Vanessa",
-      "size": 48,
-      "link": "https://i.imgur.com/iRvLOET.png"
-    },
-    {
-      "date": "2019-05-28",
-      "name": "Pico Tetris v1.0 Tetromino Sprite 14",
-      "author": "Vanessa",
-      "size": 48,
-      "link": "https://i.imgur.com/3kBm45G.png"
-    },
-    {
-      "date": "2019-05-28",
-      "name": "Pico Tetris v1.0 Tetromino Sprite 15",
-      "author": "Vanessa",
-      "size": 48,
-      "link": "https://i.imgur.com/zr9ngtn.png"
-    }
-  ],
   "Tetr.js": [
     {
       "date": "2019-08-10",
@@ -6131,7 +5996,140 @@
       "link": "https://i.imgur.com/7fV3JRB.png"
     }
   ],
-  "Misc Pico-8 Tetris-like games": [
+  "PICO-8 games": [
+    {
+      "date": "2019-05-28",
+      "name": "Pico Tetris v0.9 Tetromino Sprite 0",
+      "author": "Vanessa",
+      "size": 48,
+      "link": "https://i.imgur.com/bjz02RN.png"
+    },
+    {
+      "date": "2019-05-28",
+      "name": "Pico Tetris v0.9 Tetromino Sprite 1",
+      "author": "Vanessa",
+      "size": 48,
+      "link": "https://i.imgur.com/d1OirHc.png"
+    },
+    {
+      "date": "2019-05-28",
+      "name": "Pico Tetris v0.9 Tetromino Sprite 2",
+      "author": "Vanessa",
+      "size": 48,
+      "link": "https://i.imgur.com/0OgeZQv.png"
+    },
+    {
+      "date": "2019-05-28",
+      "name": "Pico Tetris v1.0 Tetromino Sprite 0",
+      "author": "Vanessa",
+      "size": 48,
+      "link": "https://i.imgur.com/8AK4Eip.png"
+    },
+    {
+      "date": "2019-05-28",
+      "name": "Pico Tetris v1.0 Tetromino Sprite 1",
+      "author": "Vanessa",
+      "size": 48,
+      "link": "https://i.imgur.com/c8nYn1p.png"
+    },
+    {
+      "date": "2019-05-28",
+      "name": "Pico Tetris v1.0 Tetromino Sprite 2",
+      "author": "Vanessa",
+      "size": 48,
+      "link": "https://i.imgur.com/mJ4D8Ok.png"
+    },
+    {
+      "date": "2019-05-28",
+      "name": "Pico Tetris v1.0 Tetromino Sprite 3",
+      "author": "Vanessa",
+      "size": 48,
+      "link": "https://i.imgur.com/xNIS5d0.png"
+    },
+    {
+      "date": "2019-05-28",
+      "name": "Pico Tetris v1.0 Tetromino Sprite 4",
+      "author": "Vanessa",
+      "size": 48,
+      "link": "https://i.imgur.com/XQsVdM2.png"
+    },
+    {
+      "date": "2019-05-28",
+      "name": "Pico Tetris v1.0 Tetromino Sprite 5",
+      "author": "Vanessa",
+      "size": 48,
+      "link": "https://i.imgur.com/bC0IlJG.png"
+    },
+    {
+      "date": "2019-05-28",
+      "name": "Pico Tetris v1.0 Tetromino Sprite 6",
+      "author": "Vanessa",
+      "size": 48,
+      "link": "https://i.imgur.com/DqbqivG.png"
+    },
+    {
+      "date": "2019-05-28",
+      "name": "Pico Tetris v1.0 Tetromino Sprite 7",
+      "author": "Vanessa",
+      "size": 48,
+      "link": "https://i.imgur.com/FDd7Bpk.png"
+    },
+    {
+      "date": "2019-05-28",
+      "name": "Pico Tetris v1.0 Tetromino Sprite 8",
+      "author": "Vanessa",
+      "size": 48,
+      "link": "https://i.imgur.com/clVOvJ5.png"
+    },
+    {
+      "date": "2019-05-28",
+      "name": "Pico Tetris v1.0 Tetromino Sprite 9",
+      "author": "Vanessa",
+      "size": 48,
+      "link": "https://i.imgur.com/ktRDq0N.png"
+    },
+    {
+      "date": "2019-05-28",
+      "name": "Pico Tetris v1.0 Tetromino Sprite 10",
+      "author": "Vanessa",
+      "size": 48,
+      "link": "https://i.imgur.com/ps4qzWx.png"
+    },
+    {
+      "date": "2019-05-28",
+      "name": "Pico Tetris v1.0 Tetromino Sprite 11",
+      "author": "Vanessa",
+      "size": 48,
+      "link": "https://i.imgur.com/KbSzXt8.png"
+    },
+    {
+      "date": "2019-05-28",
+      "name": "Pico Tetris v1.0 Tetromino Sprite 12",
+      "author": "Vanessa",
+      "size": 48,
+      "link": "https://i.imgur.com/R5R4H7V.png"
+    },
+    {
+      "date": "2019-05-28",
+      "name": "Pico Tetris v1.0 Tetromino Sprite 13",
+      "author": "Vanessa",
+      "size": 48,
+      "link": "https://i.imgur.com/iRvLOET.png"
+    },
+    {
+      "date": "2019-05-28",
+      "name": "Pico Tetris v1.0 Tetromino Sprite 14",
+      "author": "Vanessa",
+      "size": 48,
+      "link": "https://i.imgur.com/3kBm45G.png"
+    },
+    {
+      "date": "2019-05-28",
+      "name": "Pico Tetris v1.0 Tetromino Sprite 15",
+      "author": "Vanessa",
+      "size": 48,
+      "link": "https://i.imgur.com/zr9ngtn.png"
+    },
     {
       "date": "2019-08-09",
       "name": "Tiny Tetris Classic Skin",
@@ -6166,6 +6164,13 @@
       "author": "tesselode",
       "size": 48,
       "link": "https://i.imgur.com/wCVciCj.png"
+    },
+    {
+      "date": "2020-05-10",
+      "name": "Tetris (Pico-8)",
+      "author": "orangecode",
+      "size": 32,
+      "link": "https://i.imgur.com/A2kZYuD.png"
     },
     {
       "date": "2020-06-17",
@@ -6607,6 +6612,13 @@
       "author": "Spaz48",
       "size": 32,
       "link": "https://i.imgur.com/Dg4SLD9.png"
+    },
+    {
+      "date": "2020-07-30",
+      "name": "Meatris (Pico-8)",
+      "author": "db0z",
+      "size": 32,
+      "link": "https://i.imgur.com/hhCrTuG.png"
     }
   ],
   "Other Guideline Tetris games": [
@@ -7337,13 +7349,6 @@
       "link": "https://i.imgur.com/PueFO7R.png"
     },
     {
-      "date": "2020-05-10",
-      "name": "Tetris (Pico-8)",
-      "author": "orangecode",
-      "size": 32,
-      "link": "https://i.imgur.com/A2kZYuD.png"
-    },
-    {
       "date": "2019-05-22",
       "name": "Tetron (2000)",
       "author": "Yoki",
@@ -7377,13 +7382,6 @@
       "author": "Jens Krause",
       "size": 42,
       "link": "https://i.imgur.com/KFImJgt.png"
-    },
-    {
-      "date": "2020-07-30",
-      "name": "Meatris (Pico-8)",
-      "author": "db0z",
-      "size": 32,
-      "link": "https://i.imgur.com/hhCrTuG.png"
     },
     {
       "date": "2020-07-30",
