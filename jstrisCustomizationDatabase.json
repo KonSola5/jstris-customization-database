@@ -2155,7 +2155,7 @@
       "link": "https://i.imgur.com/6xz5BEI.png"
     }
   ],
-  "Tetris (Electronica 60)": [
+  "Tetris (Electronika 60)": [
     {
       "date": "2019-07-13",
       "name": "Electronica 60 Tetris Skin 1",
@@ -2169,15 +2169,6 @@
       "author": "Rich ¥Weeds¥ Nagel",
       "size": 48,
       "link": "https://i.imgur.com/cVxcNr1.png"
-    }
-  ],
-  "Tetris (Arcade, Photon System)": [
-    {
-      "date": "2019-04-14",
-      "name": "Tetris (Arcade, Photon System)",
-      "author": "Superjustinbros",
-      "size": 32,
-      "link": "https://i.imgur.com/VmJsJEV.png"
     }
   ],
   "Tetris (Spectrum Holobyte, DOS)": [
@@ -2208,6 +2199,50 @@
       "author": "Spectrum HoloByte",
       "size": 32,
       "link": "https://i.imgur.com/q58VYGg.png"
+    }
+  ],
+  "Tetris (SEGA)": [
+    {
+      "date": "2019-04-14",
+      "name": "Tetris (1988, Arcade: Sega System 16)",
+      "author": "Sega",
+      "size": 32,
+      "link": "https://i.imgur.com/JaKqP7U.png"
+    },
+    {
+      "date": "2019-04-14",
+      "name": "Tetris (1989, Arcade: Sega System E)",
+      "author": "Sega",
+      "size": 32,
+      "link": "https://i.imgur.com/VmJsJEV.png"
+    },
+    {
+      "date": "2019-04-14",
+      "name": "Tetris (1989, Mega Drive)",
+      "author": "Sega",
+      "size": 32,
+      "link": "https://i.imgur.com/ZaXgGVa.png"
+    },
+    {
+      "date": "2019-04-14",
+      "name": "Flash Point (1989, Arcade)",
+      "author": "Sega",
+      "size": 32,
+      "link": "https://i.imgur.com/9ZzNNFm.png"
+    },
+    {
+      "date": "2019-04-14",
+      "name": "Bloxeed (1989, Arcade)",
+      "author": "Sega",
+      "size": 32,
+      "link": "https://i.imgur.com/k3Nhxwz.png"
+    },
+    {
+      "date": "2019-09-23",
+      "name": "Sega Tetris (1999, NAOMI/Dreamcast)",
+      "author": "Sega",
+      "size": 36,
+      "link": "https://i.imgur.com/vzfIKcC.png"
     }
   ],
   "Tetris (Atari/Tengen)": [
@@ -2245,36 +2280,6 @@
       "author": "MattMayuga",
       "size": 32,
       "link": "https://i.imgur.com/FYPBIOZ.png"
-    }
-  ],
-  "Tetris (SEGA)": [
-    {
-      "date": "2019-04-14",
-      "name": "Tetris (SEGA)",
-      "author": "Superjustinbros",
-      "size": 32,
-      "link": "https://i.imgur.com/JaKqP7U.png"
-    },
-    {
-      "date": "2019-04-14",
-      "name": "Flash Point (SEGA)",
-      "author": "Superjustinbros",
-      "size": 32,
-      "link": "https://i.imgur.com/9ZzNNFm.png"
-    },
-    {
-      "date": "2019-04-14",
-      "name": "Bloxeed (SEGA)",
-      "author": "Superjustinbros",
-      "size": 32,
-      "link": "https://i.imgur.com/k3Nhxwz.png"
-    },
-    {
-      "date": "2019-09-23",
-      "name": "Sega Tetris (Dreamcast)",
-      "author": "Eddie",
-      "size": 36,
-      "link": "https://i.imgur.com/vzfIKcC.png"
     }
   ],
   "Tetris (Game Boy)": [
@@ -2446,15 +2451,6 @@
       "author": "KonSola5",
       "size": 32,
       "link": "https://i.imgur.com/VheVChK.png"
-    }
-  ],
-  "Tetris (SEGA Genesis)": [
-    {
-      "date": "2019-04-14",
-      "name": "Tetris/Flash Point (Sega Genesis)",
-      "author": "Superjustinbros",
-      "size": 32,
-      "link": "https://i.imgur.com/ZaXgGVa.png"
     }
   ],
   "Tetris & Dr. Mario": [
