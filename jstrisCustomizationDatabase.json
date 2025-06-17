@@ -2183,28 +2183,28 @@
   "Tetris (Spectrum Holobyte, DOS)": [
     {
       "date": "2019-06-07",
-      "name": "Tetris (1987) DOS CGA 4-Color",
+      "name": "Tetris (1988) DOS CGA 4-Color",
       "author": "Spectrum HoloByte",
       "size": 32,
       "link": "https://i.imgur.com/V7hWwOt.png"
     },
     {
       "date": "2019-06-07",
-      "name": "Tetris (1987) DOS EGA 16-Color",
+      "name": "Tetris (1988) DOS EGA 16-Color",
       "author": "Spectrum HoloByte",
       "size": 32,
       "link": "https://i.imgur.com/Zcjsiig.png"
     },
     {
       "date": "2019-06-07",
-      "name": "Tetris (1987) DOS Tandy 16-Color",
+      "name": "Tetris (1988) DOS Tandy 16-Color",
       "author": "Spectrum HoloByte",
       "size": 32,
       "link": "https://i.imgur.com/0JebDZi.png"
     },
     {
       "date": "2019-06-07",
-      "name": "Tetris (1987) DOS CGA Alternate Palette",
+      "name": "Tetris (1988) DOS CGA Alternate Palette",
       "author": "Spectrum HoloByte",
       "size": 32,
       "link": "https://i.imgur.com/q58VYGg.png"
@@ -4370,15 +4370,6 @@
       "link": "https://i.imgur.com/fj9nqwH.png"
     }
   ],
-  "LJ65": [
-    {
-      "date": "2019-04-14",
-      "name": "LJ65 (NES)",
-      "author": "Superjustinbros",
-      "size": 32,
-      "link": "https://i.imgur.com/8p9qFRD.png"
-    }
-  ],
   "Bricklayer": [
     {
       "date": "2019-05-23",
@@ -4641,22 +4632,6 @@
       "author": "Mihys",
       "size": 32,
       "link": "https://i.imgur.com/GVbSzaV.png"
-    }
-  ],
-  "Tetrix 2": [
-    {
-      "date": "2019-05-19",
-      "name": "Tetrix 2 Egyptian (c. 2008)",
-      "author": "Ultimate Arcade",
-      "size": 40,
-      "link": "https://i.imgur.com/HotR3Fr.png"
-    },
-    {
-      "date": "2019-05-19",
-      "name": "Tetrix 2 (Flash, 2007)",
-      "author": "Ultimate Arcade",
-      "size": 40,
-      "link": "https://i.imgur.com/oR26y2N.png"
     }
   ],
   "Tetroid": [
@@ -7013,7 +6988,7 @@
   "Other Tetris-like games and hacks": [
     {
       "date": "2019-04-14",
-      "name": "LJ65 (NES)",
+      "name": "LJ65 (2002, NES Homebrew)",
       "author": "Superjustinbros",
       "size": 32,
       "link": "https://i.imgur.com/8p9qFRD.png"
@@ -7248,6 +7223,20 @@
       "author": "Park S.G.",
       "size": 32,
       "link": "https://i.imgur.com/KkAa0VX.png"
+    },
+    {
+      "date": "2019-05-19",
+      "name": "Tetrix 2 (Flash, 2007)",
+      "author": "Ultimate Arcade",
+      "size": 40,
+      "link": "https://i.imgur.com/oR26y2N.png"
+    },
+    {
+      "date": "2019-05-19",
+      "name": "Tetrix 2 Egyptian (c. 2008)",
+      "author": "Ultimate Arcade",
+      "size": 40,
+      "link": "https://i.imgur.com/HotR3Fr.png"
     },
     {
       "date": "2019-05-19",
