@@ -9933,14 +9933,14 @@
     },
     {
       "date": "2020-07-13",
-      "name": "Tetris Lite for Windows 95 Concave pieces",
+      "name": "Tetris Lite for Windows 95 (1996) Concave pieces",
       "author": "Philippe Basciano",
       "size": 32,
       "link": "https://i.imgur.com/4Aj6qyR.png"
     },
     {
       "date": "2020-07-13",
-      "name": "Tetris Lite for Windows 95 Pyramidal pieces",
+      "name": "Tetris Lite for Windows 95 (1996) Pyramidal pieces",
       "author": "Philippe Basciano",
       "size": 32,
       "link": "https://i.imgur.com/bWCW9k0.png"
@@ -11337,6 +11337,27 @@
       "author": "Guirao Software (Simon Meglic)",
       "size": 50,
       "link": "https://i.imgur.com/3BAKeKe.png"
+    },
+    {
+      "date": "2025-07-12",
+      "name": "VGATetris (1991, DOS)",
+      "author": "Jared Tarbell (Yoda)",
+      "size": 32,
+      "link": "https://i.imgur.com/WmrKWwD.png"
+    },
+    {
+      "date": "2025-07-12",
+      "name": "enable Netris32 (1999, Windows)",
+      "author": "Enable Software",
+      "size": 48,
+      "link": "https://i.imgur.com/a1HO8bv.png"
+    },
+    {
+      "date": "2025-07-12",
+      "name": "Tetris (2011, Windows)",
+      "author": "Alexandre Laurent",
+      "size": 32,
+      "link": "https://i.imgur.com/ZVRk2Pw.png"
     }
   ],
   "Custom": [
