@@ -9135,10 +9135,24 @@
     },
     {
       "date": "2020-04-12",
-      "name": "QTris (Casio Cassiopeia BE-300)",
+      "name": "QTris (2000, Pocket PC) Skin 1",
       "author": "Daniel Jackson",
       "size": 32,
-      "link": "https://i.imgur.com/8yPUIyq.png"
+      "link": "https://i.imgur.com/DsT42yj.png"
+    },
+    {
+      "date": "2025-07-13",
+      "name": "QTris (2000, Pocket PC) Skin 2",
+      "author": "Daniel Jackson",
+      "size": 32,
+      "link": "https://i.imgur.com/rtBCCic.png"
+    },
+    {
+      "date": "2025-07-13",
+      "name": "QTris (2000, Pocket PC) Skin 3",
+      "author": "Daniel Jackson",
+      "size": 32,
+      "link": "https://i.imgur.com/8Ux0vL2.png"
     },
     {
       "date": "2020-04-13",
@@ -11358,6 +11372,13 @@
       "author": "Alexandre Laurent",
       "size": 32,
       "link": "https://i.imgur.com/ZVRk2Pw.png"
+    },
+    {
+      "date": "2025-07-13",
+      "name": "Tetris (2012, Neo Geo Pocket Color)",
+      "author": "Loïc Julien",
+      "size": 32,
+      "link": "https://i.imgur.com/DgHT0pS.png"
     }
   ],
   "Custom": [
