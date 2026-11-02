@@ -7756,7 +7756,7 @@
     },
     {
       "date": "2019-12-01",
-      "name": "Block Puzzle King",
+      "name": "Block Puzzle King (2018, Android)",
       "author": "JamJam Game Studio",
       "size": 56,
       "link": "https://i.imgur.com/tHDZeDK.png"
@@ -11491,6 +11491,13 @@
       "author": "Tetra Developer Studios",
       "size": 48,
       "link": "https://i.imgur.com/31WoqGH.png"
+    },
+    {
+      "date": "2026-11-02",
+      "name": "VTetris (2008, Windows Mobile) v1.0 high-res",
+      "author": "VSiemens (Vitik)",
+      "size": 56,
+      "link": "https://i.imgur.com/WKpHL2t.png"
     }
   ],
   "Custom": [
@@ -13634,6 +13641,13 @@
       "author": "SpooKoArts",
       "size": 32,
       "link": "https://i.imgur.com/Ydre4Ll.png"
+    },
+    {
+      "date": "2026-09-29",
+      "name": "Claude Generated Blockskin",
+      "author": "Eddie",
+      "size": 32,
+      "link": "https://i.imgur.com/B5u2xgY.png"
     }
   ]
 }
